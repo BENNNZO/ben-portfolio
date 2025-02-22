@@ -6,7 +6,7 @@ export default function Home() {
 		<div className="bg-black text-white">
 			<Hero />
 			<TaskList />
-			Hello, World!
+			{/* Hello, World! */}
 		</div>
 	)
 }
