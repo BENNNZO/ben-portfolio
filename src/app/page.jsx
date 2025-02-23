@@ -6,6 +6,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 
 import Hero from "@/components/Hero"
 import Education from "@/components/Education";
+import Talents from "@/components/Talents";
 import TaskList from "@/components/TaskList"
 
 export default function Home() {
@@ -70,13 +71,6 @@ export default function Home() {
                 },
                 opacity: {
                     value: { min: 0.1, max: 0.5 },
-                    // animation: {
-                    //     enable: true,
-                    //     sync: false,
-                    //     count: 0,
-                    //     speed: 1,
-                    //     destroy: "min",
-                    // },
                 },
                 shape: {
                     type: "circle",
@@ -84,21 +78,7 @@ export default function Home() {
                 size: {
                     value: { min: 2, max: 4 },
                     random: true,
-                    // animation: {
-                    //     enable: true,
-                    //     sync: false,
-                    //     count: 0,
-                    //     speed: 0.5,
-                    //     startValue: "min"
-                    // }
                 },
-                // life: {
-                //     duration: {
-                //         sync: true,
-                //         value: 5,
-                //     },
-                //     count: 0,
-                // },
             },
             detectRetina: true,
         }),
@@ -111,6 +91,7 @@ export default function Home() {
                 <Particles options={options} />
                 <Hero />
                 <Education />
+                <Talents />
                 <TaskList />
             </div>
         )
