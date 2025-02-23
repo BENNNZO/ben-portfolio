@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function TaskList() {
     return (
-        <div className="absolute bottom-2 right-2 px-4 py-2 rounded-md bg-red-400 text-yellow-200">
+        <div className="fixed bottom-2 right-2 px-4 py-2 rounded-md bg-red-400 text-yellow-200">
             <h1>Road Map</h1>
             <ul className="list-disc list-inside">
                 <li>

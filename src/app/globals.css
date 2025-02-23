@@ -3,5 +3,41 @@
 @tailwind utilities;
 
 .absolute-center {
-    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+.hero-box-shadow {
+    /* box-shadow: inset -500px 20px black; */
+}
+
+.hero-box-shadow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0px -100px 200px black, inset 0px -50px 50px black;
+}
+
+.text-shine-purple {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(80deg, oklch(0.714 0.203 305.504) 35%, oklch(0.902 0.063 306.703) 45%, white 50%, oklch(0.902 0.063 306.703) 55%, oklch(0.714 0.203 305.504) 65%);
+    animation: shine 15s ease-in-out infinite;
+    background-size: 400%;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 250%;
+    }
+    20% {
+        background-position: 100%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    70% {
+        background-position: 0%;
+    }
 }

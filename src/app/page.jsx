@@ -1,9 +1,11 @@
 "use client"
 
 import { useMemo, useEffect, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+
 import Hero from "@/components/Hero"
+import Education from "@/components/Education";
 import TaskList from "@/components/TaskList"
 
 export default function Home() {
@@ -27,7 +29,7 @@ export default function Home() {
                 events: {
                     onHover: {
                         enable: true,
-                        mode: "repulse",
+                        mode: "bubble",
                         parallax: {
                             enable: true,
                             force: 60,
@@ -54,7 +56,7 @@ export default function Home() {
                     direction: "none",
                     enable: true,
                     outModes: {
-                        default: "bounce",
+                        default: "out",
                     },
                     random: false,
                     speed: 0.5,
@@ -67,15 +69,38 @@ export default function Home() {
                     value: 50,
                 },
                 opacity: {
-                    value: 0.25,
+                    value: { min: 0.1, max: 0.5 },
+                    // animation: {
+                    //     enable: true,
+                    //     sync: false,
+                    //     count: 0,
+                    //     speed: 1,
+                    //     destroy: "min",
+                    // },
                 },
                 shape: {
                     type: "circle",
                 },
                 size: {
-                    value: { min: 1, max: 3 },
+                    value: { min: 2, max: 4 },
+                    random: true,
+                    // animation: {
+                    //     enable: true,
+                    //     sync: false,
+                    //     count: 0,
+                    //     speed: 0.5,
+                    //     startValue: "min"
+                    // }
                 },
+                // life: {
+                //     duration: {
+                //         sync: true,
+                //         value: 5,
+                //     },
+                //     count: 0,
+                // },
             },
+            detectRetina: true,
         }),
         [],
     );
@@ -85,6 +110,7 @@ export default function Home() {
             <div className="bg-black text-white">
                 <Particles options={options} />
                 <Hero />
+                <Education />
                 <TaskList />
             </div>
         )
