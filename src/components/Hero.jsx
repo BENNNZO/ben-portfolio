@@ -1,11 +1,17 @@
+"use client"
+
 import Image from "next/image"
+import { useEffect, useMemo, useState } from "react";
+import { loadAll } from "@tsparticles/all";
+import Particles, { initParticlesEngine } from "@tsparticles/react"
 
 export default function Hero() {
+
     return (
-        <section className="h-screen bg-black flex flex-row justify-around items-center">
+        <section className="h-screen flex flex-row justify-around items-center">
             <div className="relative flex flex-col gap-2">
                 <p className="font-bold text-6xl">HEY, I'M <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">BEN</span>!</p>
-                <p className="font-semibold text-3xl opacity-50">JACK OF <span className="underline">ALLLL</span> TRAITS</p>
+                {/* <p className="font-semibold text-3xl opacity-50">MASTER OF <span className="underline">ALLLL</span> TRADES</p> */}
                 <div className="w-24 h-8 bg-purple-400 blur-xl absolute top-3 right-8 opacity-50"></div>
             </div>
             <div className="relative w-96 h-96 rounded-full">

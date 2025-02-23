@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tsparticles/all": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
     "next": "15.1.7",
     "react": "^19.0.0",
