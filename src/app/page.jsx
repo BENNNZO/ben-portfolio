@@ -89,9 +89,9 @@ export default function Home() {
         return (
             <div className="bg-black text-white">
                 <Particles options={options} />
-                <Hero />
-                <Education />
+                {/* <Hero /> */}
                 <Talents />
+                {/* <Education /> */}
                 <TaskList />
             </div>
         )
