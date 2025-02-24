@@ -1,8 +1,156 @@
+import Image from "next/image"
+
+
+
+
+// River Oak
+// Barber Shop
+// Snippity
+// School Dashboard
+// Tracker
+// 
+
 export default function TalentProgramming() {
+    const projects = [
+        {
+            title: "River Oak",
+            description: "A website for a local business in the area.",
+            source: "/img/Projects/RiverOak.webp",
+            alt: "River Oak Website"
+        },
+        {
+            title: "Barber Shop",
+            description: "A website for a local business in the area.",
+            source: "/img/Projects/Snippity.png",
+            alt: "River Oak Website"
+        },
+        {
+            title: "Snippity",
+            description: "A website for a local business in the area.",
+            source: "/img/Projects/fun-things.png",
+            alt: "River Oak Website"
+        },
+        {
+            title: "Dashboard",
+            description: "A website for a local business in the area.",
+            source: "/img/Projects/Profile.webp",
+            alt: "River Oak Website"
+        },
+        {
+            title: "Tracker",
+            description: "A website for a local business in the area.",
+            source: "/img/Projects/Hype.webp",
+            alt: "River Oak Website"
+        },
+        {
+            title: "River Oak",
+            description: "A website for a local business in the area.",
+            source: "/img/Projects/Idle.png",
+            alt: "River Oak Website"
+        }
+    ]
+
+    const skills = [
+        { 
+            source: "/img/Skills/logo-html5.svg",
+            title: "HTML5",
+            alt: "skill-html5",
+        },
+        { 
+            source: "/img/Skills/logo-css3.svg",
+            title: "CSS3",
+            alt: "skill-css3",
+        },
+        { 
+            source: "/img/Skills/logo-javascript.svg",
+            title: "JavaScript",
+            alt: "skill-javascript",
+        },
+        { 
+            source: "/img/Skills/logo-react.svg",
+            title: "React",
+            alt: "skill-react",
+        },
+        { 
+            source: "/img/Skills/logo-nextjs.svg",
+            title: "Next.js",
+            alt: "skill-nextjs",
+        },
+        { 
+            source: "/img/Skills/logo-mongodb.svg",
+            title: "MongoDB",
+            alt: "skill-mongodb",
+        },
+        { 
+            source: "/img/Skills/logo-nodejs.svg",
+            title: "Node.js",
+            alt: "skill-nodejs",
+        },
+        { 
+            source: "/img/Skills/logo-sass.svg",
+            title: "Sass",
+            alt: "skill-sass",
+        },
+        { 
+            source: "/img/Skills/logo-tailwind.svg",
+            title: "Tailwind CSS",
+            alt: "skill-tailwind",
+        },
+    ]
+    
     return (
-        <div className="">
-            
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi nam libero sapiente officia dolorem deserunt hic atque sint! Eligendi temporibus aut sunt ab odit facere consectetur, voluptatum nemo ad natus optio cum deleniti cumque soluta nobis autem, possimus consequuntur. Quaerat ipsam amet odit eaque sequi voluptatibus a eveniet nulla alias.
-        </div>
+        <>
+            <h3 className="text-shine-purple text-4xl font-bold pl-2">TECH STACK</h3>
+            <div className="flex flex-row w-full justify-between my-4">
+                {skills.map((skill, index) => (
+                    <div className="relative group" key={index}>
+                        <Image src={skill.source} width={100} height={100} alt={skill.alt} className="w-24 h-24 invert blur-md group-hover:blur-md duration-300 ease-out absolute top-0 left-0 opacity-50" />
+                        <Image src={skill.source} width={100} height={100} alt={skill.alt} className="w-24 h-24 invert -translate-y-0 group-hover:-translate-y-4 duration-300 ease-out" />
+                        <p className="text-center opacity-0 group-hover:opacity-100 duration-200 ease-out">{skill.title}</p>
+                    </div>
+                ))}
+            </div>
+            <h3 className="text-shine-purple text-4xl font-bold pl-2 mt-8">PROJECTS</h3>
+            <div className="grid grid-cols-3 grid-rows-2 gap-2 my-4">
+                {projects.map((project, index) => (
+                    <div key={index} className="h-64 w-full relative rounded-md group scale-95 hover:scale-100 duration-200 ease-out">
+                        <Image alt={project.alt} src={project.source} width={1920} height={1080} className="w-full h-full object-cover rounded-md absolute top-0 left-0 brightness-100 group-hover:brightness-75 duration-300 ease-out blur-xl group-hover:blur-2xl opacity-50 group-hover:opacity-75" />
+                        <Image alt={project.alt} src={project.source} width={1920} height={1080} className="w-full h-full object-cover rounded-md absolute top-0 left-0 brightness-100 group-hover:brightness-75 duration-300 ease-out" />
+                        <div className="absolute w-full h-full overflow-hidden rounded-md opacity-0 group-hover:opacity-100 backdrop-blur-md ease-out duration-200">
+                            <div className="bg-black/50 py-2">
+                                <p className="text-shine-purple text-2xl font-bold text-center">
+                                    {project.title}
+                                </p>
+                            </div>
+                            <p className="px-4 py-2">
+                                {project.description}
+                            </p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            <h3 className="text-shine-purple text-4xl font-bold pl-2 mt-12">OTHER INFORMATION</h3>
+            <ul className="pl-8 mt-4 mb-24 flex flex-col gap-2">
+                <li>
+                    <div className="w-2 h-2 bg-purple-400 rounded-full absolute -translate-x-6 translate-y-2"></div>
+                    <p>
+                        I know allot of Powershell, Batch, and Bash. I've used both Linux and Windows terminals extensivly and would say I'm quite professient in both of them.
+                    </p>
+                </li>
+                <li>
+                    <div className="w-2 h-2 bg-purple-400 rounded-full absolute -translate-x-6 translate-y-2"></div>
+                    <p>
+                        Even though this section of my portfolio talks about web development I have done a decent amount of python as well. Most of my python projects are for automating a simple task or web scraping data.
+                    </p>
+                </li>
+                <li>
+                    <div className="w-2 h-2 bg-purple-400 rounded-full absolute -translate-x-6 translate-y-2"></div>
+                    <p>
+                        As far as lower level programming languages go, I have dabbled in Rust and C++. I understand the languages but I would not say I'm fluent in them. Mainly because I have never had a real reason to learn those languages other than for fun.
+                    </p>
+                </li>
+            </ul>
+            {/* <p className="pl-2 my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, ratione. Suscipit placeat voluptas rerum voluptates sequi dolor at tempora explicabo atque quam modi ipsum pariatur tempore totam, commodi ea nam?</p> */}
+        </>
     )
 }
