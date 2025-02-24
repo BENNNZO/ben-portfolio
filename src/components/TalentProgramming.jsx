@@ -5,7 +5,7 @@ export default function TalentProgramming() {
         {
             title: "River Oak",
             description: "A website I built for my dad complete with a contact forum and payment page backed with Stripe.",
-            source: "/img/Projects/riveroak.webp",
+            source: "/img/Projects/riveroak.png",
             alt: "River Oak Website",
             link: "https://example.com/river-oak"
         },
