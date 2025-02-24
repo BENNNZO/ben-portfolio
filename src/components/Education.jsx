@@ -1,3 +1,5 @@
+import Header from "./Header"
+
 export default function Education() {
     const education = [
         {
@@ -30,11 +32,7 @@ export default function Education() {
 
     return (
         <section className="w-full relative flex flex-col items-center">
-            <div className="relative my-24">
-                <h1 className="text-7xl font-bold bg-clip-text text-transparent text-shine-purple absolute top-0 left-0 blur-3xl">EDUCATION</h1>
-                <h1 className="text-7xl font-bold bg-clip-text text-transparent text-shine-purple">EDUCATION</h1>
-            </div>
-
+            <Header title="EDUCATION" />
             <ul className="flex flex-col gap-8 max-w-2xl">
                 {education.map((e, i) => (
                     <li className="relative pl-8" key={`education-${i}`}>

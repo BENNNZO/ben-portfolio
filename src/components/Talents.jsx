@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { useSearchParams } from "next/navigation"
 
+import Header from "./Header"
 import TalentCyber from "./TalentCyber"
 import TalentMusic from "./TalentMusic"
 import TalentProgramming from "./TalentProgramming"
@@ -15,10 +16,7 @@ export default function Talents() {
 
     return (
         <section className="w-full relative flex flex-col items-center">
-            <div className="relative mb-24 mt-48">
-                <h1 className="text-7xl font-bold bg-clip-text text-transparent text-shine-purple absolute top-0 left-0 blur-3xl">TALENTS</h1>
-                <h1 className="text-7xl font-bold bg-clip-text text-transparent text-shine-purple">TALENTS</h1>
-            </div>
+            <Header title="TALENTS" />
             <div className="flex flex-row gap-2 mb-12">
                 <div className="relative">
                     <button className={`border-2 rounded-full px-3 py-0.5 duration-200 ease-out ${selectedTalent === "cyber" ? "bg-black text-shine-purple border-purple-300 scale-100" : "border-white/30 scale-90 opacity-40"}`} onClick={() => setSelectedTalent("cyber")}>Cyber</button>
