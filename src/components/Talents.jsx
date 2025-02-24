@@ -32,6 +32,14 @@ export default function Talents() {
                     <button className={`border-2 rounded-full px-3 py-0.5 duration-200 ease-out ${selectedTalent === "music" ? "bg-black text-shine-purple border-purple-300 scale-100" : "border-white/30 scale-90 opacity-40"}`} onClick={() => setSelectedTalent("music")}>Music</button>
                     <button className={`absolute top-0 left-0 border-2 rounded-full px-3 py-0.5 duration-200 ease-out ${selectedTalent === "music" ? "bg-black text-shine-purple border-purple-300 scale-100 blur-lg" : "border-white/30 scale-90 opacity-0"}`} onClick={() => setSelectedTalent("music")}>Music</button>
                 </div>
+                <div className="relative">
+                    <button className={`border-2 rounded-full px-3 py-0.5 duration-200 ease-out ${selectedTalent === "desin" ? "bg-black text-shine-purple border-purple-300 scale-100" : "border-white/30 scale-90 opacity-40"}`} onClick={() => setSelectedTalent("desin")}>Design</button>
+                    <button className={`absolute top-0 left-0 border-2 rounded-full px-3 py-0.5 duration-200 ease-out ${selectedTalent === "desin" ? "bg-black text-shine-purple border-purple-300 scale-100 blur-lg" : "border-white/30 scale-90 opacity-0"}`} onClick={() => setSelectedTalent("desin")}>Design</button>
+                </div>
+                <div className="relative">
+                    <button className={`border-2 rounded-full px-3 py-0.5 duration-200 ease-out ${selectedTalent === "edits" ? "bg-black text-shine-purple border-purple-300 scale-100" : "border-white/30 scale-90 opacity-40"}`} onClick={() => setSelectedTalent("edits")}>Editing</button>
+                    <button className={`absolute top-0 left-0 border-2 rounded-full px-3 py-0.5 duration-200 ease-out ${selectedTalent === "edits" ? "bg-black text-shine-purple border-purple-300 scale-100 blur-lg" : "border-white/30 scale-90 opacity-0"}`} onClick={() => setSelectedTalent("edits")}>Editing</button>
+                </div>
             </div>
             <div className="flex justify-center">
                 <div className={`absolute w-[1000px] ease-in-out duration-300 ${selectedTalent === "cyber" ? "opacity-100" : "opacity-0 pointer-events-none -translate-x-24"}`}>
@@ -41,6 +49,12 @@ export default function Talents() {
                     <TalentProgramming />
                 </div>
                 <div className={`absolute w-[1000px] ease-in-out duration-300 ${selectedTalent === "music" ? "opacity-100" : "opacity-0 pointer-events-none translate-x-24"}`}>
+                    <TalentMusic />
+                </div>
+                <div className={`absolute w-[1000px] ease-in-out duration-300 ${selectedTalent === "edits" ? "opacity-100" : "opacity-0 pointer-events-none translate-x-24"}`}>
+                    <TalentMusic />
+                </div>
+                <div className={`absolute w-[1000px] ease-in-out duration-300 ${selectedTalent === "desin" ? "opacity-100" : "opacity-0 pointer-events-none translate-x-24"}`}>
                     <TalentMusic />
                 </div>
             </div>

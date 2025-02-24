@@ -8,7 +8,7 @@ export default function Contacts() {
                     <h1 className="text-7xl font-bold bg-clip-text text-transparent text-shine-purple">CONTACTS</h1>
                 </div>
                 <p className="animate-pulse mb-12">E-Mail form coming soon...</p>
-                <div className="border border-purple-400/20 bg-purple-950/10 rounded-md mb-64 p-4 backdrop-blur-sm">
+                <div className="border border-purple-400/20 bg-purple-950/5 rounded-md mb-32 p-4 backdrop-blur-sm">
                     <p className="mb-4">NOTE - I get a lot of spam calls so If I don't answer a call don't hesitate to text or e-mail me!</p>
                     <div className="flex flex-col gap-2">
                         <div className="flex flex-row gap-2">
