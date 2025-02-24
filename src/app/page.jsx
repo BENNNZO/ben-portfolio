@@ -7,6 +7,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import Hero from "@/components/Hero"
 import Education from "@/components/Education";
 import Talents from "@/components/Talents";
+import Contacts from "@/components/Contacts";
 import TaskList from "@/components/TaskList"
 
 export default function Home() {
@@ -89,9 +90,10 @@ export default function Home() {
         return (
             <div className="bg-black text-white">
                 <Particles options={options} />
-                <Hero />
-                <Talents />
-                <Education />
+                {/* <Hero /> */}
+                {/* <Talents /> */}
+                {/* <Education /> */}
+                <Contacts />
                 {/* <TaskList /> */}
             </div>
         )

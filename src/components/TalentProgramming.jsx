@@ -1,52 +1,48 @@
 import Image from "next/image"
 
-
-
-
-// River Oak
-// Barber Shop
-// Snippity
-// School Dashboard
-// Tracker
-// 
-
 export default function TalentProgramming() {
     const projects = [
         {
             title: "River Oak",
             description: "A website for a local business in the area.",
             source: "/img/Projects/RiverOak.webp",
-            alt: "River Oak Website"
+            alt: "River Oak Website",
+            link: "https://example.com/river-oak"
         },
         {
             title: "Barber Shop",
             description: "A website for a local business in the area.",
             source: "/img/Projects/Snippity.png",
-            alt: "River Oak Website"
+            alt: "Barber Shop Website",
+            link: "https://example.com/barber-shop"
         },
         {
             title: "Snippity",
             description: "A website for a local business in the area.",
             source: "/img/Projects/fun-things.png",
-            alt: "River Oak Website"
+            alt: "Snippity Website",
+            link: "https://example.com/snippity"
         },
         {
             title: "Dashboard",
             description: "A website for a local business in the area.",
             source: "/img/Projects/Profile.webp",
-            alt: "River Oak Website"
+            alt: "Dashboard Website",
+            link: "https://example.com/dashboard"
         },
         {
             title: "Tracker",
             description: "A website for a local business in the area.",
             source: "/img/Projects/Hype.webp",
-            alt: "River Oak Website"
+            alt: "Tracker Website",
+            link: "https://example.com/tracker"
         },
         {
-            title: "River Oak",
+            title: "Idle",
             description: "A website for a local business in the area.",
             source: "/img/Projects/Idle.png",
-            alt: "River Oak Website"
+            alt: "Idle Website",
+            link: "https://example.com/idle"
         }
     ]
 
@@ -146,7 +142,7 @@ export default function TalentProgramming() {
                 <li>
                     <div className="w-2 h-2 bg-purple-400 rounded-full absolute -translate-x-6 translate-y-2"></div>
                     <p>
-                        As far as lower level programming languages go, I have dabbled in Rust and C++. I understand the languages but I would not say I'm fluent in them. Mainly because I have never had a real reason to learn those languages other than for fun.
+                        As far as lower level programming languages go, I have dabbled in Rust and C++. I understand both languages but I would not say I am fluent in either of them. Mainly because I have never had a real reason to learn those languages other just than for fun.
                     </p>
                 </li>
             </ul>
