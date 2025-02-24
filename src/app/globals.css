@@ -6,7 +6,7 @@
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
 
-.talent-card {
+/* .talent-card {
     @apply absolute ease-in-out duration-300 w-[750px] rounded-md bg-yellow-400;
 }
 
@@ -14,7 +14,13 @@
     @apply absolute top-0 left-0 w-full h-full rounded-md;
     content: '';
     background: radial-gradient(400px circle at var(--x) var(--y), blue, transparent, transparent);
+    opacity: 0;
+    transition: opacity 200ms ease-out;
     z-index: 2;
+}
+
+.talent-card:hover::before {
+    opacity: 1;
 }
 
 .talent-content {
@@ -22,7 +28,7 @@
     width: calc(100% - 2px);
     height: calc(100% - 2px);
     margin: 1px;
-}
+} */
 
 .hero-box-shadow::after {
     content: '';

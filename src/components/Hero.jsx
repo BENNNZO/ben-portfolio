@@ -7,8 +7,8 @@ export default function Hero() {
     return (
         <section className="h-screen flex flex-row justify-around items-center overflow-hidden relative hero-box-shadow">
             {/* BUBBLES */}
-            <div className="bg-purple-400 absolute bottom-10 left-1/2 -translate-x-1/2 w-[50%] aspect-[2/1] rounded-t-full blur-[300px]"></div>
-            <div className="bg-fuchsia-400 absolute bottom-10 left-1/2 -translate-x-1/2 w-[100%] h-52 rounded-t-full blur-[300px]"></div>
+            <div className="bg-purple-400 absolute bottom-10 left-1/2 -translate-x-1/2 w-[50%] aspect-[2/1] rounded-t-full" style={{ filter: 'blur(300px)' }}></div>
+            <div className="bg-fuchsia-400 absolute bottom-10 left-1/2 -translate-x-1/2 w-full h-52 rounded-t-full blur-[300px]"></div>
 
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-52 bg-gradient-to-b from-transparent to-black blur-xl"></div>
             {/* <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-32 bg-gradient-to-b from-transparent to-black"></div> */}

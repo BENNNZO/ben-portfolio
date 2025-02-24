@@ -88,11 +88,11 @@ export default function Home() {
     if (init) {
         return (
             <div className="bg-black text-white">
-                <Particles options={options} />
-                <Hero />
+                {/* <Particles options={options} /> */}
+                {/* <Hero /> */}
                 <Talents />
-                <Education />
-                <TaskList />
+                {/* <Education /> */}
+                {/* <TaskList /> */}
             </div>
         )
     }
