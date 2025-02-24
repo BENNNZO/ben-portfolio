@@ -61,3 +61,19 @@
         background-position: 0%;
     }
 }
+
+.hero-pulse {
+    animation: hero-pulse 5s ease-in-out infinite;
+}
+
+@keyframes hero-pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
