@@ -4,43 +4,43 @@ export default function TalentProgramming() {
     const projects = [
         {
             title: "River Oak",
-            description: "A website for a local business in the area.",
-            source: "/img/Projects/RiverOak.webp",
+            description: "A website I built for my dad complete with a contact forum and payment page backed with Stripe.",
+            source: "/img/Projects/riveroak.webp",
             alt: "River Oak Website",
             link: "https://example.com/river-oak"
         },
         {
             title: "Barber Shop",
-            description: "A website for a local business in the area.",
-            source: "/img/Projects/Snippity.png",
+            description: "A website I built for a local business in the area. Sadly they do not use it anymore, but it still displays my design skills.",
+            source: "/img/Projects/barbering.png",
             alt: "Barber Shop Website",
             link: "https://example.com/barber-shop"
         },
         {
             title: "Snippity",
-            description: "A website for a local business in the area.",
-            source: "/img/Projects/fun-things.png",
+            description: "A website I made a while ago that has full user authentication with NextAuth and a mongoDB database. It was a site where people could share there code snippets.",
+            source: "/img/Projects/snippity.png",
             alt: "Snippity Website",
             link: "https://example.com/snippity"
         },
         {
             title: "Dashboard",
-            description: "A website for a local business in the area.",
-            source: "/img/Projects/Profile.webp",
+            description: "This is a website I personally use everyday. It has links to all of my current online classes, background music, quick links, and a todo list that I use to keep track of my daily tasks.",
+            source: "/img/Projects/dashboard.png",
             alt: "Dashboard Website",
             link: "https://example.com/dashboard"
         },
         {
             title: "Tracker",
-            description: "A website for a local business in the area.",
-            source: "/img/Projects/Hype.webp",
+            description: "This is another website I personally use everyday. I built this website cause I love tracking data and looking at statistics. So this website helps me keep track of my daily habits, sleep time, mood, and more.",
+            source: "/img/Projects/tracker.png",
             alt: "Tracker Website",
             link: "https://example.com/tracker"
         },
         {
-            title: "Idle",
-            description: "A website for a local business in the area.",
-            source: "/img/Projects/Idle.png",
+            title: "Detailing",
+            description: "I used to run a small detailing business on the side and this is the website I built for it. It has a contact form and a gallery of all the cars I have detailed. Plus a quick estimate form",
+            source: "/img/Projects/detailing.png",
             alt: "Idle Website",
             link: "https://example.com/idle"
         }
@@ -113,11 +113,11 @@ export default function TalentProgramming() {
                 <h3 className="text-shine-purple text-4xl font-bold pl-2 whitespace-nowrap">PROJECTS</h3>
                 {/* <div className="h-px w-full relative bottom-2 bg-gradient-to-r from-purple-400 to-transparent opacity-50"></div> */}
             </div>
-            <div className="grid grid-cols-3 grid-rows-2 gap-2 my-4">
+            <div className="grid grid-cols-2 grid-rows-3 gap-2 my-4">
                 {projects.map((project, index) => (
-                    <div key={index} className="h-64 w-full relative rounded-md group scale-95 hover:scale-100 duration-200 ease-out">
-                        <Image alt={project.alt} src={project.source} width={1920} height={1080} className="w-full h-full object-cover rounded-md absolute top-0 left-0 duration-500 ease-out blur-xl group-hover:blur-2xl opacity-50 group-hover:opacity-75" />
-                        <Image alt={project.alt} src={project.source} width={1920} height={1080} className="w-full h-full object-cover rounded-md absolute top-0 left-0 duration-500 ease-out blur-0 group-hover:blur-md group-hover:opacity-50 opacity-100" />
+                    <div key={index} className="w-full aspect-[3/2] relative rounded-md group scale-95 hover:scale-100 duration-200 ease-out">
+                        <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out blur-xl group-hover:blur-2xl opacity-50 group-hover:opacity-75" />
+                        <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out blur-0 group-hover:blur-md group-hover:opacity-50 opacity-100" />
                         <div className="absolute w-full h-full overflow-hidden rounded-md opacity-0 group-hover:opacity-100 ease-out duration-200">
                             <div className="bg-black/50 py-2">
                                 <p className="text-shine-purple text-2xl font-bold text-center">
