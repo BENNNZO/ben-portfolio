@@ -115,19 +115,19 @@ export default function TalentProgramming() {
             </div>
             <div className="grid grid-cols-2 grid-rows-3 gap-2 my-4">
                 {projects.map((project, index) => (
-                    <div key={index} className="w-full aspect-[3/2] relative rounded-md group scale-95 hover:scale-100 duration-200 ease-out">
+                    <div key={index} className="w-full aspect-[3/2] relative rounded-md group scale-95 hover:scale-100 duration-200 ease-out cursor-pointer">
                         <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out blur-xl group-hover:blur-2xl opacity-50 group-hover:opacity-75" />
-                        <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out blur-0 group-hover:blur-md group-hover:opacity-50 opacity-100" />
-                        <div className="absolute w-full h-full overflow-hidden rounded-md opacity-0 group-hover:opacity-100 ease-out duration-200">
-                            <div className="bg-black/50 py-2">
+                        <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out opacity-100" />
+                        {/* <div className="absolute w-full h-full overflow-hidden rounded-md opacity-0 group-hover:opacity-100 ease-out duration-200">
+                            <div className="py-2">
                                 <p className="text-shine-purple text-2xl font-bold text-center">
                                     {project.title}
                                 </p>
                             </div>
-                            <p className="px-4 py-2 bg-black/20 h-full">
+                            <p className="px-4 py-2 text-xl h-full">
                                 {project.description}
                             </p>
-                        </div>
+                        </div> */}
                     </div>
                 ))}
             </div>

@@ -5,7 +5,7 @@ import Image from "next/image"
 export default function Hero() {
 
     return (
-        <section className="h-screen flex flex-row justify-around items-center overflow-hidden relative hero-box-shadow">
+        <section className="h-screen flex lg:flex-row flex-col-reverse lg:justify-around justify-center lg:gap-0 gap-24 items-center overflow-hidden relative hero-box-shadow">
             {/* BUBBLES */}
             <div className="bg-purple-400 absolute bottom-10 left-1/2 -translate-x-1/2 w-[50%] aspect-[2/1] rounded-t-full hero-pulse" style={{ filter: 'blur(300px)' }}></div>
             <div className="bg-fuchsia-400 absolute bottom-10 left-1/2 -translate-x-1/2 w-full h-52 rounded-t-full blur-[300px]"></div>

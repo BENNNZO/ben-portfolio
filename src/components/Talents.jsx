@@ -40,19 +40,19 @@ export default function Talents() {
                 </div>
             </div>
             <div className="flex justify-center">
-                <div className={`absolute w-[1000px] ease-in-out duration-300 ${selectedTalent === "cyber" ? "opacity-100" : "opacity-0 pointer-events-none -translate-x-24"}`}>
+                <div className={`absolute w-[1000px] ease-in-out duration-300 ${selectedTalent === "cyber" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-90 pointer-events-none -translate-x-0"}`}>
                     <TalentCyber />
                 </div>
-                <div className={`relative w-[1000px] ease-in-out duration-300 ${selectedTalent === "coder" ? "opacity-100" : "opacity-0 pointer-events-none translate-y-24"}`}>
+                <div className={`relative w-[1000px] ease-in-out duration-300 ${selectedTalent === "coder" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-95 pointer-events-none translate-y-0"}`}>
                     <TalentProgramming />
                 </div>
-                <div className={`absolute w-[1000px] ease-in-out duration-300 ${selectedTalent === "music" ? "opacity-100" : "opacity-0 pointer-events-none translate-x-24"}`}>
+                <div className={`absolute w-[1000px] ease-in-out duration-300 ${selectedTalent === "music" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-90 pointer-events-none translate-x-0"}`}>
                     <TalentMusic />
                 </div>
-                <div className={`absolute w-[1000px] ease-in-out duration-300 ${selectedTalent === "edits" ? "opacity-100" : "opacity-0 pointer-events-none translate-x-24"}`}>
+                <div className={`absolute w-[1000px] ease-in-out duration-300 ${selectedTalent === "edits" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-90 pointer-events-none translate-x-0"}`}>
                     <TalentMusic />
                 </div>
-                <div className={`absolute w-[1000px] ease-in-out duration-300 ${selectedTalent === "desin" ? "opacity-100" : "opacity-0 pointer-events-none translate-x-24"}`}>
+                <div className={`absolute w-[1000px] ease-in-out duration-300 ${selectedTalent === "desin" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-90 pointer-events-none translate-x-0"}`}>
                     <TalentMusic />
                 </div>
             </div>
