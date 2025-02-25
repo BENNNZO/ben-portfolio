@@ -132,14 +132,13 @@ export default function TalentProgramming() {
                 ))}
             </div>
             <div className="flex flex-row items-end gap-4">
-                <h3 className="text-shine-purple text-4xl font-bold pl-2 whitespace-nowrap">OTHER INFORMATION</h3>
-                {/* <div className="h-px w-full relative bottom-2 bg-gradient-to-r from-purple-400 to-transparent opacity-50"></div> */}
+            <h3 className="text-shine-purple text-4xl font-bold pl-2 whitespace-nowrap mt-8">RELEVANT INFORMATION</h3>
             </div>
             <ul className="pl-8 mt-4 mb-24 flex flex-col gap-2">
                 <li>
                     <div className="w-2 h-2 bg-purple-400 rounded-full absolute -translate-x-6 translate-y-2"></div>
                     <p>
-                        I know allot of Powershell, Batch, and Bash. I've used both Linux and Windows terminals extensivly and would say I'm quite professient in both of them.
+                        I know allot of Powershell, Batch, and Bash. I've used both Linux and Windows terminals extensivly and would say I'm quite proficient in all of them.
                     </p>
                 </li>
                 <li>
@@ -155,7 +154,6 @@ export default function TalentProgramming() {
                     </p>
                 </li>
             </ul>
-            {/* <p className="pl-2 my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, ratione. Suscipit placeat voluptas rerum voluptates sequi dolor at tempora explicabo atque quam modi ipsum pariatur tempore totam, commodi ea nam?</p> */}
         </>
     )
 }

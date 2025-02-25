@@ -11,12 +11,10 @@ export default function Hero() {
             <div className="bg-fuchsia-400 absolute bottom-10 left-1/2 -translate-x-1/2 w-full h-52 rounded-t-full blur-[300px]"></div>
 
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-52 bg-gradient-to-b from-transparent to-black blur-xl"></div>
-            {/* <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-32 bg-gradient-to-b from-transparent to-black"></div> */}
             
             {/* CONTENT */}
             <div className="relative flex flex-col gap-2">
                 <p className="font-bold text-6xl">HEY, I'M <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">BEN</span>!</p>
-                {/* <p className="font-semibold text-3xl opacity-50">A MAN OF <span className="underline">MANY</span> TRADES</p> */}
                 <div className="w-24 h-8 bg-purple-400 blur-xl absolute top-3 right-8 opacity-50"></div>
             </div>
 
