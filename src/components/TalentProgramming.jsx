@@ -121,10 +121,22 @@ export default function TalentProgramming() {
                     <div key={index} className="w-full aspect-[3/2] relative rounded-md group scale-95 hover:scale-100 duration-200 ease-out">
                         <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out blur-xl group-hover:blur-2xl opacity-50 group-hover:opacity-75" />
                         <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out opacity-100" />
-                        <Image onClick={() => setInfo(project.title)} src="/svg/info2.svg" width={35} height={35} alt="more info" className="absolute top-4 right-4 mix-blend-difference invert backdrop-blur-lg rounded-full group-hover:opacity-100 opacity-0 duration-150 ease-out cursor-pointer hover:scale-110" />
+                        <Image onClick={() => setInfo(project.title)} src="/svg/info2.svg" width={35} height={35} alt="more info" className="absolute top-4 right-4 mix-blend-difference invert backdrop-blur-lg rounded-full group-hover:opacity-100 opacity-0 duration-200 ease-out cursor-pointer hover:scale-110" />
                     </div>
                 ))}
             </div>
+
+            {/* PROJECT INFO MODALS */}
+            {projects.map((project, index) => (
+                <div key={index} className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 pt-2 pb-4 bg-black/80 border border-white/20 backdrop-blur-lg lg:w-[800px] rounded-xl shadow-lg ${info === project.title ? "opacity-100 pointer-events-auto scale-100" : "opacity-0 pointer-events-none scale-90"} duration-300 ease-out`}>
+                    <div className="flex flex-row justify-between items-center mb-4 mt-2">
+                        <p className={`text-4xl font-bold text-center uppercase text-shine-purple`}>{project.title}</p>
+                        <Image src="/svg/close.svg" width={30} height={30} alt="close modal" className="rounded-full invert cursor-pointer"  onClick={() => setInfo(null)} />
+                    </div>
+                    <Image alt={project.alt} src={project.source} width={1920} height={1080} className="w-full aspect-[16/9] object-cover object-top rounded-md" />
+                    <p className="mt-6 mb-2">{project.description}</p>
+                </div>
+            ))}
 
             {/* RELEVANT INFORMATION */}
             <h3 className="text-shine-purple text-4xl font-bold pl-2 whitespace-nowrap mt-8">RELEVANT INFORMATION</h3>
