@@ -1,6 +1,12 @@
+"use client"
+
+import { useState } from "react"
+
 import Image from "next/image"
 
 export default function TalentProgramming() {
+    const [info, setInfo] = useState(null)
+
     const projects = [
         {
             title: "River Oak",
@@ -47,59 +53,57 @@ export default function TalentProgramming() {
     ]
 
     const skills = [
-        { 
+        {
             source: "/img/Skills/logo-html5.svg",
             title: "HTML5",
             alt: "skill-html5",
         },
-        { 
+        {
             source: "/img/Skills/logo-css3.svg",
             title: "CSS3",
             alt: "skill-css3",
         },
-        { 
+        {
             source: "/img/Skills/logo-javascript.svg",
             title: "JavaScript",
             alt: "skill-javascript",
         },
-        { 
+        {
             source: "/img/Skills/logo-react.svg",
             title: "React",
             alt: "skill-react",
         },
-        { 
+        {
             source: "/img/Skills/logo-nextjs.svg",
             title: "Next.js",
             alt: "skill-nextjs",
         },
-        { 
+        {
             source: "/img/Skills/logo-mongodb.svg",
             title: "MongoDB",
             alt: "skill-mongodb",
         },
-        { 
+        {
             source: "/img/Skills/logo-nodejs.svg",
             title: "Node.js",
             alt: "skill-nodejs",
         },
-        { 
+        {
             source: "/img/Skills/logo-sass.svg",
             title: "Sass",
             alt: "skill-sass",
         },
-        { 
+        {
             source: "/img/Skills/logo-tailwind.svg",
             title: "Tailwind CSS",
             alt: "skill-tailwind",
         },
     ]
-    
+
     return (
         <>
-            <div className="flex flex-row items-end gap-4">
-                <h3 className="text-shine-purple text-4xl font-bold pl-2 whitespace-nowrap">TECH STACK</h3>
-                {/* <div className="h-px w-full relative bottom-2 bg-gradient-to-r from-purple-400 to-transparent opacity-50"></div> */}
-            </div>
+            {/* TECH STACK */}
+            <h3 className="text-shine-purple text-4xl font-bold pl-2 whitespace-nowrap">TECH STACK</h3>
             <div className="flex flex-row w-full justify-between my-4">
                 {skills.map((skill, index) => (
                     <div className="relative group" key={index}>
@@ -109,31 +113,21 @@ export default function TalentProgramming() {
                     </div>
                 ))}
             </div>
-            <div className="flex flex-row items-end gap-4">
-                <h3 className="text-shine-purple text-4xl font-bold pl-2 whitespace-nowrap">PROJECTS</h3>
-                {/* <div className="h-px w-full relative bottom-2 bg-gradient-to-r from-purple-400 to-transparent opacity-50"></div> */}
-            </div>
+
+            {/* PROJECTS */}
+            <h3 className="text-shine-purple text-4xl font-bold pl-2 whitespace-nowrap">PROJECTS</h3>
             <div className="grid grid-cols-2 grid-rows-3 gap-2 my-4">
                 {projects.map((project, index) => (
-                    <div key={index} className="w-full aspect-[3/2] relative rounded-md group scale-95 hover:scale-100 duration-200 ease-out cursor-pointer">
+                    <div key={index} className="w-full aspect-[3/2] relative rounded-md group scale-95 hover:scale-100 duration-200 ease-out">
                         <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out blur-xl group-hover:blur-2xl opacity-50 group-hover:opacity-75" />
                         <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out opacity-100" />
-                        {/* <div className="absolute w-full h-full overflow-hidden rounded-md opacity-0 group-hover:opacity-100 ease-out duration-200">
-                            <div className="py-2">
-                                <p className="text-shine-purple text-2xl font-bold text-center">
-                                    {project.title}
-                                </p>
-                            </div>
-                            <p className="px-4 py-2 text-xl h-full">
-                                {project.description}
-                            </p>
-                        </div> */}
+                        <Image onClick={() => setInfo(project.title)} src="/svg/info2.svg" width={35} height={35} alt="more info" className="absolute top-4 right-4 mix-blend-difference invert backdrop-blur-lg rounded-full group-hover:opacity-100 opacity-0 duration-150 ease-out cursor-pointer hover:scale-110" />
                     </div>
                 ))}
             </div>
-            <div className="flex flex-row items-end gap-4">
+
+            {/* RELEVANT INFORMATION */}
             <h3 className="text-shine-purple text-4xl font-bold pl-2 whitespace-nowrap mt-8">RELEVANT INFORMATION</h3>
-            </div>
             <ul className="pl-8 mt-4 mb-24 flex flex-col gap-2">
                 <li>
                     <div className="w-2 h-2 bg-purple-400 rounded-full absolute -translate-x-6 translate-y-2"></div>
