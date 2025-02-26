@@ -29,7 +29,7 @@ export default function TalentMusic() {
         },
         {
             length: "3",
-            skill: "Vocal Production"
+            skill: "Vocals"
         }
     ]
 
@@ -52,11 +52,8 @@ export default function TalentMusic() {
                 ))}
             </div>
 
-            <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center mt-12 lg:text-left">PRODUCTION</h3>
-            <List list={productionList} />
-
             <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center mt-12 lg:text-left">SKILLS</h3>
-            <ul className={"flex flex-row justify-between gap-12 mt-4"}>
+            <ul className={"md:flex md:flex-row sm:grid sm:grid-cols-2 flex flex-col justify-between gap-12 mt-4"}>
                 {skillsList.map((item, index) => (
                     <li key={index} className="bg-purple-950/20 border border-purple-950/50 backdrop-blur-sm w-full rounded-md py-8">
                         {/* <div className="w-2 h-2 bg-purple-400 rounded-full absolute -translate-x-6 translate-y-2"></div> */}
@@ -64,11 +61,14 @@ export default function TalentMusic() {
                             <p className="text-4xl font-bold text-shine-purple">{item.length}</p>
                             <p className="font-bold">Years</p>
                         </div>
-                        <div className="w-3/4 mx-auto h-px bg-white/20 my-4"></div>
-                        <p className="text-center">{item.skill}</p>
+                        <div className="w-3/4 mx-auto h-px bg-purple-950/50 my-4"></div>
+                        <p className="text-center text-xl font-bold tracking-wider">{item.skill}</p>
                     </li>
                 ))}
             </ul>
+
+            <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center mt-12 lg:text-left">PRODUCTION</h3>
+            <List list={productionList} />
         </>
     )
 }

@@ -62,7 +62,7 @@ export default function AudioPlayer({ title, src }) {
     }
 
     return (
-        <div className="flex flex-row gap-1 rounded-md lg:hover:bg-purple-950/20 lg:bg-black bg-purple-950/20 ease-out duration-150 p-2" style={{ backgroundColor: `${isPlaying ? "rgb(59 7 100 / 0.3)" : ""}` }}>
+        <div className="flex flex-row gap-1 rounded-md lg:hover:bg-purple-950/20 lg:bg-black bg-purple-950/20 ease-out duration-150 p-2 pr-6" style={{ backgroundColor: `${isPlaying ? "rgb(59 7 100 / 0.3)" : ""}` }}>
             <audio ref={audioRef} src={src} preload="metadata" onLoadedMetadata={() => updateData()} onEnded={() => resetData()}></audio>
 
 
