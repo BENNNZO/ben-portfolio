@@ -41,14 +41,14 @@ export default function Education() {
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-gradient-to-b from-purple-400 to-transparent h-full w-px"></div>
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-purple-500 rounded-full w-[11px] h-[11px]"></div>
                         </div>
-                        <h2 className="text-3xl font-bold text-shine-purple">{e.title}</h2>
-                        <p className="font-semibold text-purple-300">{e.degree}</p>
+                        <h2 className="md:text-3xl text-2xl font-bold text-shine-purple">{e.title}</h2>
+                        <p className="font-semibold md:text-md text-sm text-purple-300">{e.degree}</p>
                         <ul className="my-4 flex flex-col gap-2">
                             {e.points.map((p, i) => (
                                 <li key={`education-point-${i}`} className="group hover:pl-2 ease-out duration-150">
                                     <div style={{ filter: `brightness(${1 / (i + 1)})` }} className="group-hover:w-4 group-hover:h-4 group-hover:left-0 group-hover:translate-y-1 ease-out duration-150 bg-purple-400 backdrop-blur-3xl w-2 h-2 rounded-full absolute left-1 translate-y-2"></div>
                                     <div style={{ filter: `brightness(${1 / (i + 1)})` }} className="group-hover:w-4 group-hover:h-4 group-hover:left-0 group-hover:translate-y-1 ease-out duration-150 bg-purple-400 backdrop-blur-3xl w-2 h-2 rounded-full absolute left-1 translate-y-2 blur-md animate-pulse"></div>
-                                    <p>{p}</p>
+                                    <p className="md:text-md text-sm">{p}</p>
                                 </li>
                             ))}
                         </ul>

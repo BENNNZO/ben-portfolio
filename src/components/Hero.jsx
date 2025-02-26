@@ -14,8 +14,8 @@ export default function Hero() {
             
             {/* CONTENT */}
             <div className="relative flex flex-col gap-2">
-                <p className="font-bold text-6xl">HEY, I'M <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">BEN</span>!</p>
-                <div className="w-24 h-8 bg-purple-400 blur-xl absolute top-3 right-8 opacity-50"></div>
+                <p className="font-bold md:text-6xl text-4xl">HEY, I'M <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">BEN</span>!</p>
+                <div className="w-24 h-8 bg-purple-400 blur-xl absolute top-3 right-8 md:opacity-50 opacity-0"></div>
             </div>
 
             <div className="relative w-96 h-96 rounded-full">

@@ -91,9 +91,11 @@ export default function Home() {
             <div className="bg-black text-white">
                 <Particles options={options} />
                 <Hero />
-                <Talents />
-                <Education />
-                <Contacts />
+                <div className="px-4 md:px-8 lg:px-0">
+                    <Talents />
+                    <Education />
+                    <Contacts />
+                </div>
                 {/* <TaskList /> */}
             </div>
         )
