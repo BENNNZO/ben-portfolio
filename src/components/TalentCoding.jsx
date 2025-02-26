@@ -1,11 +1,18 @@
 "use client"
 
 import { useState } from "react"
+import List from "./List"
 
 import Image from "next/image"
 
 export default function TalentCoding() {
     const [info, setInfo] = useState(null)
+
+    const relevantInformation = [
+        "I am familiar with Powershell, Batch, and Bash. I've used both Linux and Windows terminals extensivly and would say I'm quite proficient in all of them.",
+        "Even though this section of my portfolio talks about web development I have done a decent amount of python as well. Most of my python projects are for automating a simple task or web scraping data.",
+        "As far as lower level programming languages go, I have dabbled in Rust and C++. I understand both languages but I would not say I am fluent in either of them. Mainly because I have never had a real reason to learn those languages other just than for fun.",
+    ]
 
     const projects = [
         {
@@ -153,26 +160,7 @@ export default function TalentCoding() {
 
             {/* RELEVANT INFORMATION */}
             <h3 className="text-shine-purple text-4xl font-bold pl-2 whitespace-normal md:whitespace-nowrap mt-8">RELEVANT INFORMATION</h3>
-            <ul className="pl-8 mt-4 mb-24 flex flex-col gap-2">
-                <li>
-                    <div className="w-2 h-2 bg-purple-400 rounded-full absolute -translate-x-6 translate-y-2"></div>
-                    <p>
-                        I know allot of Powershell, Batch, and Bash. I've used both Linux and Windows terminals extensivly and would say I'm quite proficient in all of them.
-                    </p>
-                </li>
-                <li>
-                    <div className="w-2 h-2 bg-purple-400 rounded-full absolute -translate-x-6 translate-y-2"></div>
-                    <p>
-                        Even though this section of my portfolio talks about web development I have done a decent amount of python as well. Most of my python projects are for automating a simple task or web scraping data.
-                    </p>
-                </li>
-                <li>
-                    <div className="w-2 h-2 bg-purple-400 rounded-full absolute -translate-x-6 translate-y-2"></div>
-                    <p>
-                        As far as lower level programming languages go, I have dabbled in Rust and C++. I understand both languages but I would not say I am fluent in either of them. Mainly because I have never had a real reason to learn those languages other just than for fun.
-                    </p>
-                </li>
-            </ul>
+            <List list={relevantInformation} style="mb-24" />
         </>
     )
 }

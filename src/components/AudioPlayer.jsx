@@ -12,19 +12,6 @@ export default function AudioPlayer({ title, src }) {
     const progressBar = useRef()
     const animationRef = useRef()
 
-    // useEffect(() => {
-    //     if (!audio) return
-
-    //     function updateData() {
-    //     }
-
-    //     audio.addEventListener("loadedmetadata", updateData)
-
-    //     return () => {
-    //         audio.removeEventListener("loadedmetadata", updateData)
-    //     }
-    // }, [audioRef?.current?.readyState])
-
     function updateData() {
         setDuration(audioRef.current.duration);
     }
@@ -75,7 +62,7 @@ export default function AudioPlayer({ title, src }) {
     }
 
     return (
-        <div className="flex flex-row gap-1 rounded-md lg:hover:bg-purple-950/15 lg:bg-black bg-purple-950/20 ease-out duration-150 p-2" style={{ backgroundColor: `${isPlaying ? "rgb(59 7 100 / 0.3)" : ""}` }}>
+        <div className="flex flex-row gap-1 rounded-md lg:hover:bg-purple-950/20 lg:bg-black bg-purple-950/20 ease-out duration-150 p-2" style={{ backgroundColor: `${isPlaying ? "rgb(59 7 100 / 0.3)" : ""}` }}>
             <audio ref={audioRef} src={src} preload="metadata" onLoadedMetadata={() => updateData()} onEnded={() => resetData()}></audio>
 
 
@@ -83,6 +70,8 @@ export default function AudioPlayer({ title, src }) {
                 {/* <button className="" onClick={() => audioJump(-10)}>
                     <Image src="/svg/arrow-back.svg" width={25} height={25} alt="pause button" className="invert w-5 h-5 opacity-70" />
                 </button> */}
+
+                {/* Play / Pause Button */}
                 <button className="lg:hover:scale-110 scale-100 ease-out duration-150" onClick={() => togglePlayState()}>
                     {isPlaying ? (
                         <Image src="/svg/pause2.svg" width={25} height={25} alt="pause button" className="invert w-6 h-6" />
@@ -90,6 +79,7 @@ export default function AudioPlayer({ title, src }) {
                         <Image src="/svg/play.svg" width={25} height={25} alt="pause button" className="invert w-6 h-6" />
                     )}
                 </button>
+                
                 {/* <button className="" onClick={() => audioJump(10)}>
                     <Image src="/svg/arrow-forward.svg" width={25} height={25} alt="pause button" className="invert w-5 h-5 opacity-70" />
                 </button> */}
@@ -99,7 +89,7 @@ export default function AudioPlayer({ title, src }) {
                 {/* Title */}
                 <p className="tracking-wide whitespace-nowrap font-bold text-2xl text-shine-purple">{title}</p>
 
-                {/* Times and Progress Bar */}
+                {/* Duration/Time + Progress Bar */}
                 <div className="flex flex-row items-center gap-4">
                     <p className="font-mono">{formatTime(currentTime)}</p>
 
