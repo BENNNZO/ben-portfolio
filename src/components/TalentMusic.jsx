@@ -38,13 +38,13 @@ export default function TalentMusic() {
                 ))}
             </div>
             <div className="flex flex-col gap-2">
-                <audio src="/mp3/Manuela.mp3"     controls className=""></audio>
-                <audio src="/mp3/M.i.a.mp3"       controls className=""></audio>
-                <audio src="/mp3/I DONT.mp3"      controls className=""></audio>
-                <audio src="/mp3/Same.mp3"        controls className=""></audio>
-                <audio src="/mp3/Selfish.mp3"     controls className=""></audio>
-                <audio src="/mp3/Confusing.mp3"   controls className=""></audio>
-                <audio src="/mp3/Another Day.mp3" controls className=""></audio>
+                {/* <audio src="/mp3/Manuela.mp3"     controls className=""></audio> */}
+                {/* <audio src="/mp3/M.i.a.mp3"       controls className=""></audio> */}
+                {/* <audio src="/mp3/I DONT.mp3"      controls className=""></audio> */}
+                {/* <audio src="/mp3/Same.mp3"        controls className=""></audio> */}
+                {/* <audio src="/mp3/Selfish.mp3"     controls className=""></audio> */}
+                {/* <audio src="/mp3/Confusing.mp3"   controls className=""></audio> */}
+                {/* <audio src="/mp3/Another Day.mp3" controls className=""></audio> */}
             </div>
         </>
     )
