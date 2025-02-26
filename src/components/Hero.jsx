@@ -3,7 +3,6 @@
 import Image from "next/image"
 
 export default function Hero() {
-
     return (
         <section className="h-screen flex lg:flex-row flex-col-reverse lg:justify-around justify-center lg:gap-0 gap-24 items-center overflow-hidden relative hero-box-shadow">
             {/* BUBBLES */}
@@ -14,7 +13,7 @@ export default function Hero() {
             
             {/* CONTENT */}
             <div className="relative flex flex-col gap-2">
-                <p className="font-bold md:text-6xl text-4xl">HEY, I'M <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">BEN</span>!</p>
+                <p className="font-bold md:text-6xl text-4xl">HEY, I'M <span className="text-shine-purple">BEN</span>!</p>
                 <div className="w-24 h-8 bg-purple-400 blur-xl absolute top-3 right-8 md:opacity-50 opacity-0"></div>
             </div>
 
