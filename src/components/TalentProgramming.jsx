@@ -118,7 +118,7 @@ export default function TalentProgramming() {
             <h3 className="text-shine-purple text-4xl font-bold lg:pl-2 whitespace-nowrap text-center lg:text-left mt-8 lg:mt-0">PROJECTS</h3>
             <div className="md:grid md:grid-cols-2 md:grid-rows-3 gap-2 my-4 flex flex-col relative">
                 {projects.map((project, index) => (
-                    <div key={index} className="aspect-[3/2] relative rounded-md group scale-95 hover:scale-100 duration-200 ease-out">
+                    <div key={index} className="aspect-[3/2] relative rounded-md group lg:scale-95 lg:hover:scale-100 duration-200 ease-out">
                         <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out blur-xl group-hover:blur-2xl opacity-50 group-hover:opacity-75" />
                         <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out opacity-100" />
                         <Image onClick={() => setInfo(project.title)} src="/svg/info2.svg" width={35} height={35} alt="more info" className="absolute top-4 right-4 mix-blend-difference invert rounded-full group-hover:opacity-100 lg:opacity-0 opacity-100 duration-200 ease-out cursor-pointer hover:scale-110" />
