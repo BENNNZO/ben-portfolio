@@ -18,8 +18,8 @@ export default function TalentMusic() {
 
     return (
         <>
-            <h3 className="text-shine-purple text-4xl font-bold lg:pl-2 whitespace-nowrap text-center lg:text-left">TOP TRACKS</h3>
-            <div className="flex flex-col flex-wrap gap-2">
+            <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left">TOP TRACKS</h3>
+            <div className="flex flex-col flex-wrap gap-4 mt-4">
                 {music.map((song, index) => (
                     // <div key={index} className="px-4 py-3 h-16 flex flex-row gap-2 justify-between">
                     //     <div className="flex flex-row gap-2 w-1/4">

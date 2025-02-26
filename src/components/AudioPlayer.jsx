@@ -38,6 +38,12 @@ export default function AudioPlayer({ title, src }) {
         audioRef.current.currentTime = time
     }
 
+    function resetData() {
+        setIsPlaying(false)
+        setCurrentTime(0)
+        progressBar.current.value = 0
+    }
+
     function togglePlayState() {
         setIsPlaying(state => {
             if (state) {
@@ -69,42 +75,67 @@ export default function AudioPlayer({ title, src }) {
     }
 
     return (
-        <div className="flex flex-col gap-2 px-4 py-2 border border-white/20 rounded-md">
-            <audio ref={audioRef} src={src} preload="metadata" onLoadedMetadata={() => updateData()}></audio>
-
-            {/* Title */}
-            {/* <div className="flex flex-row items-end gap-4"> */}
-                <p className="font-mono whitespace-nowrap font-bold text-2xl">{title}</p>
-                {/* <p className="font-mono whitespace-nowrap opacity-50">BENZO</p> */}
-            {/* </div> */}
+        <div className="flex flex-row gap-1 rounded-md hover:bg-purple-950/20 ease-out duration-150 p-2">
+            <audio ref={audioRef} src={src} preload="metadata" onLoadedMetadata={() => updateData()} onEnded={() => resetData()}></audio>
 
 
-            <div className="flex flex-row items-center gap-4">
-                {/* Buttons */}
-                <div className="flex flex-row w-32 items-center justify-around">
-                    {/* <button className="" onClick={() => audioJump(-10)}>
-                        <Image src="/svg/arrow-back.svg" width={25} height={25} alt="pause button" className="invert w-6 h-6" />
-                    </button> */}
-                    <button className="" onClick={() => togglePlayState()}>
-                        {isPlaying ? (
-                            <Image src="/svg/pause.svg" width={25} height={25} alt="pause button" className="invert w-6 h-6" />
-                        ) : (
-                            <Image src="/svg/play.svg" width={25} height={25} alt="pause button" className="invert w-6 h-6" />
-                        )}
-                    </button>
-                    {/* <button className="" onClick={() => audioJump(10)}>
-                        <Image src="/svg/arrow-forward.svg" width={25} height={25} alt="pause button" className="invert w-6 h-6" />
-                    </button> */}
+            <div className="flex flex-row aspect-square w-16 items-center justify-center">
+                {/* <button className="" onClick={() => audioJump(-10)}>
+                    <Image src="/svg/arrow-back.svg" width={25} height={25} alt="pause button" className="invert w-5 h-5 opacity-70" />
+                </button> */}
+                <button className="lg:hover:scale-110 scale-100 ease-out duration-150" onClick={() => togglePlayState()}>
+                    {isPlaying ? (
+                        <Image src="/svg/pause2.svg" width={25} height={25} alt="pause button" className="invert w-6 h-6" />
+                    ) : (
+                        <Image src="/svg/play.svg" width={25} height={25} alt="pause button" className="invert w-6 h-6" />
+                    )}
+                </button>
+                {/* <button className="" onClick={() => audioJump(10)}>
+                    <Image src="/svg/arrow-forward.svg" width={25} height={25} alt="pause button" className="invert w-5 h-5 opacity-70" />
+                </button> */}
+            </div>
+
+            <div className="flex flex-col gap-1 w-full">
+                {/* Title */}
+                <div className="flex flex-row justify-between">
+                    {/* <div className="flex flex-row items-end gap-4"> */}
+                        <p className="font-mono whitespace-nowrap font-bold text-2xl w-1/4 text-shine-purple">{title}</p>
+                        {/* <p className="font-mono whitespace-nowrap opacity-50">BENZO</p> */}
+                    {/* </div> */}
+
+                    {/* Buttons */}
+                    {/* <div className="flex flex-row w-32 items-center justify-around">
+                        <button className="" onClick={() => audioJump(-10)}>
+                            <Image src="/svg/arrow-back.svg" width={25} height={25} alt="pause button" className="invert w-5 h-5 opacity-70" />
+                        </button>
+                        <button className="lg:hover:scale-110 scale-100 ease-out duration-150" onClick={() => togglePlayState()}>
+                            {isPlaying ? (
+                                <Image src="/svg/pause2.svg" width={25} height={25} alt="pause button" className="invert w-6 h-6" />
+                            ) : (
+                                <Image src="/svg/play.svg" width={25} height={25} alt="pause button" className="invert w-6 h-6" />
+                            )}
+                        </button>
+                        <button className="" onClick={() => audioJump(10)}>
+                            <Image src="/svg/arrow-forward.svg" width={25} height={25} alt="pause button" className="invert w-5 h-5 opacity-70" />
+                        </button>
+                    </div> */}
+                    <div className="w-1/4"></div>
                 </div>
 
-                {/* Current Time */}
-                <p className="font-mono">{formatTime(currentTime)}</p>
+                <div className="flex flex-row items-center gap-4">
 
-                {/* Progress Bar */}
-                <input ref={progressBar} type="range" min={0} max={Math.floor(duration)} defaultValue={0} onChange={(e) => changeTime(e.target.value)} className="w-full" />
+                    {/* Current Time */}
+                    <p className="font-mono">{formatTime(currentTime)}</p>
 
-                {/* Duration */}
-                <p className="font-mono">{formatTime(duration)}</p>
+                    {/* Progress Bar */}
+                    <div className="relative w-full">
+                        <input ref={progressBar} type="range" min={0} max={Math.floor(duration)} defaultValue={0} onChange={(e) => changeTime(e.target.value)} className="audio-progress-bar" />
+                        <div className="absolute top-[calc(50%+1px)] -translate-y-1/2 left-0 h-2 rounded-full bg-white pointer-events-none" style={{ width: `${0.35 + (currentTime / duration * 100)}%` }}></div>
+                    </div>
+
+                    {/* Duration */}
+                    <p className="font-mono">{formatTime(duration)}</p>
+                </div>
             </div>
         </div>
     )

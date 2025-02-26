@@ -6,29 +6,69 @@
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
 
-/* .talent-card {
-    @apply absolute ease-in-out duration-300 w-[750px] rounded-md bg-yellow-400;
+.text-shine-purple {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(80deg, oklch(0.714 0.203 305.504) 35%, oklch(0.902 0.063 306.703) 45%, white 50%, oklch(0.902 0.063 306.703) 55%, oklch(0.714 0.203 305.504) 65%);
+    animation: shine 30s ease-in-out infinite;
+    background-size: 400%;
 }
 
-.talent-card::before {
-    @apply absolute top-0 left-0 w-full h-full rounded-md;
-    content: '';
-    background: radial-gradient(400px circle at var(--x) var(--y), blue, transparent, transparent);
-    opacity: 0;
-    transition: opacity 200ms ease-out;
-    z-index: 2;
+/* --------------------------------------------------------------------------------------- */
+
+/*********** Baseline, reset styles ***********/
+input[type="range"] {
+    @apply w-full;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
 }
 
-.talent-card:hover::before {
-    opacity: 1;
+/* Removes default focus */
+input[type="range"]:focus {
+    outline: none;
 }
 
-.talent-content {
-    @apply bg-red-400 rounded-md;
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
-    margin: 1px;
-} */
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, oklch(0.714 0.203 305.504), oklch(0.496 0.265 301.924));
+    border-radius: 0.5rem;
+    height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    margin-top: -4px;
+    /* Centers thumb on the track */
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+    background-color: #bb00ff;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+    background-color: #ffffff;
+    border: none;
+    /*Removes extra border that FF applies*/
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+}
+
+/* --------------------------------------------------------------------------------------- */
 
 .hero-box-shadow::after {
     content: '';
@@ -40,39 +80,39 @@
     box-shadow: inset 0px -100px 200px black, inset 0px -50px 50px black;
 }
 
-.text-shine-purple {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(80deg, oklch(0.714 0.203 305.504) 35%, oklch(0.902 0.063 306.703) 45%, white 50%, oklch(0.902 0.063 306.703) 55%, oklch(0.714 0.203 305.504) 65%);
-    animation: shine 30s ease-in-out infinite;
-    background-size: 400%;
+.hero-pulse {
+    animation: hero-pulse 5s ease-in-out infinite;
 }
+
+/* ANIMATION */
 
 @keyframes shine {
     0% {
         background-position: 250%;
     }
+
     20% {
         background-position: 100%;
     }
+
     50% {
         background-position: 100%;
     }
+
     70% {
         background-position: 0%;
     }
-}
-
-.hero-pulse {
-    animation: hero-pulse 5s ease-in-out infinite;
 }
 
 @keyframes hero-pulse {
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         opacity: 1;
     }
