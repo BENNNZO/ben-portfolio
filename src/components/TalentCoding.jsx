@@ -4,7 +4,7 @@ import { useState } from "react"
 
 import Image from "next/image"
 
-export default function TalentProgramming() {
+export default function TalentCoding() {
     const [info, setInfo] = useState(null)
 
     const projects = [

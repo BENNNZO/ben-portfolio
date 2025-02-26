@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation"
 import Header from "./Header"
 import TalentCyber from "./TalentCyber"
 import TalentMusic from "./TalentMusic"
-import TalentProgramming from "./TalentProgramming"
+import TalentCoding from "./TalentCoding"
 
 export default function Talents() {
     const searchParams = useSearchParams()
@@ -44,7 +44,7 @@ export default function Talents() {
                     <TalentCyber />
                 </div>
                 <div className={`relative max-w-5xl ease-in-out duration-300 ${selectedTalent === "coder" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-95 pointer-events-none translate-y-0"}`}>
-                    <TalentProgramming />
+                    <TalentCoding />
                 </div>
                 <div className={`absolute max-w-5xl ease-in-out duration-300 ${selectedTalent === "music" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-90 pointer-events-none translate-x-0"}`}>
                     <TalentMusic />
