@@ -40,19 +40,19 @@ export default function Talents() {
                 </div>
             </div>
             <div className="flex justify-center">
-                <div className={`absolute max-w-5xl ease-in-out duration-300 ${selectedTalent === "cyber" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-90 pointer-events-none -translate-x-0"}`}>
+                <div className={`absolute max-w-5xl w-full ease-in-out duration-300 ${selectedTalent === "cyber" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-90 pointer-events-none -translate-x-0"}`}>
                     <TalentCyber />
                 </div>
-                <div className={`relative max-w-5xl ease-in-out duration-300 ${selectedTalent === "coder" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-95 pointer-events-none translate-y-0"}`}>
+                <div className={`relative max-w-5xl w-full ease-in-out duration-300 ${selectedTalent === "coder" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-95 pointer-events-none translate-y-0"}`}>
                     <TalentCoding />
                 </div>
-                <div className={`absolute max-w-5xl ease-in-out duration-300 ${selectedTalent === "music" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-90 pointer-events-none translate-x-0"}`}>
+                <div className={`absolute max-w-5xl w-full ease-in-out duration-300 ${selectedTalent === "music" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-90 pointer-events-none translate-x-0"}`}>
                     <TalentMusic />
                 </div>
-                <div className={`absolute max-w-5xl ease-in-out duration-300 ${selectedTalent === "edits" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-90 pointer-events-none translate-x-0"}`}>
+                <div className={`absolute max-w-5xl w-full ease-in-out duration-300 ${selectedTalent === "edits" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-90 pointer-events-none translate-x-0"}`}>
                     <TalentMusic />
                 </div>
-                <div className={`absolute max-w-5xl ease-in-out duration-300 ${selectedTalent === "desin" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-90 pointer-events-none translate-x-0"}`}>
+                <div className={`absolute max-w-5xl w-full ease-in-out duration-300 ${selectedTalent === "desin" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-90 pointer-events-none translate-x-0"}`}>
                     <TalentMusic />
                 </div>
             </div>
