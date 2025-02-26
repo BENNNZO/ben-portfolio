@@ -121,7 +121,7 @@ export default function TalentProgramming() {
                     <div key={index} className="aspect-[3/2] relative rounded-md group scale-95 hover:scale-100 duration-200 ease-out">
                         <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out blur-xl group-hover:blur-2xl opacity-50 group-hover:opacity-75" />
                         <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out opacity-100" />
-                        <Image onClick={() => setInfo(project.title)} src="/svg/info2.svg" width={35} height={35} alt="more info" className="absolute top-4 right-4 mix-blend-difference invert backdrop-blur-lg rounded-full group-hover:opacity-100 lg:opacity-0 opacity-100 duration-200 ease-out cursor-pointer hover:scale-110" />
+                        <Image onClick={() => setInfo(project.title)} src="/svg/info2.svg" width={35} height={35} alt="more info" className="absolute top-4 right-4 mix-blend-difference invert rounded-full group-hover:opacity-100 lg:opacity-0 opacity-100 duration-200 ease-out cursor-pointer hover:scale-110" />
 
                         {/* PROJECT INFO MODALS */}
                         <div className={`absolute md:hidden flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 pt-2 pb-4 bg-black/80 border border-white/20 backdrop-blur-lg w-full h-full rounded-md shadow-lg ${info === project.title ? "opacity-100 pointer-events-auto scale-100" : "opacity-0 pointer-events-none scale-90"} duration-300 ease-out`}>
