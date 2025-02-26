@@ -75,7 +75,7 @@ export default function AudioPlayer({ title, src }) {
     }
 
     return (
-        <div className="flex flex-row gap-1 rounded-md lg:hover:bg-purple-950/20 lg:bg-black bg-purple-950/20 ease-out duration-150 p-2">
+        <div className="flex flex-row gap-1 rounded-md lg:hover:bg-purple-950/15 lg:bg-black bg-purple-950/20 ease-out duration-150 p-2" style={{ backgroundColor: `${isPlaying ? "rgb(59 7 100 / 0.3)" : ""}` }}>
             <audio ref={audioRef} src={src} preload="metadata" onLoadedMetadata={() => updateData()} onEnded={() => resetData()}></audio>
 
 
@@ -106,6 +106,7 @@ export default function AudioPlayer({ title, src }) {
                     <div className="relative w-full">
                         <input ref={progressBar} type="range" min={0} max={Math.floor(duration)} defaultValue={0} onChange={(e) => changeTime(e.target.value)} className="audio-progress-bar" />
                         <div className="absolute top-[calc(50%+1px)] -translate-y-1/2 left-0 h-2 rounded-full bg-white pointer-events-none" style={{ width: `${0.35 + (currentTime / duration * 100)}%` }}></div>
+                        <div className="absolute top-[calc(50%+1px)] -translate-y-1/2 left-0 h-3 w-3 rounded-full bg-white pointer-events-none blur-xl" style={{ left: `${(currentTime / duration * 100) - 0.5}%` }}></div>
                     </div>
 
                     <p className="font-mono">{formatTime(duration)}</p>
