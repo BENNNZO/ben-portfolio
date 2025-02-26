@@ -75,7 +75,7 @@ export default function AudioPlayer({ title, src }) {
     }
 
     return (
-        <div className="flex flex-row gap-1 rounded-md hover:bg-purple-950/20 ease-out duration-150 p-2">
+        <div className="flex flex-row gap-1 rounded-md lg:hover:bg-purple-950/20 lg:bg-black bg-purple-950/20 ease-out duration-150 p-2">
             <audio ref={audioRef} src={src} preload="metadata" onLoadedMetadata={() => updateData()} onEnded={() => resetData()}></audio>
 
 
@@ -97,7 +97,7 @@ export default function AudioPlayer({ title, src }) {
 
             <div className="flex flex-col gap-1 w-full">
                 {/* Title */}
-                <p className="tracking-wide whitespace-nowrap font-bold text-2xl w-1/4 text-shine-purple">{title}</p>
+                <p className="tracking-wide whitespace-nowrap font-bold text-2xl text-shine-purple">{title}</p>
 
                 {/* Times and Progress Bar */}
                 <div className="flex flex-row items-center gap-4">
