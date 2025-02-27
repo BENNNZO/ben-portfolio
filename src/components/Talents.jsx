@@ -50,10 +50,10 @@ export default function Talents() {
                     <TalentMusic />
                 </div>
                 <div className={`absolute max-w-5xl w-full ease-in-out duration-300 ${selectedTalent === "edits" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-90 pointer-events-none translate-x-0"}`}>
-                    <TalentMusic />
+                    <TalentCyber />
                 </div>
                 <div className={`absolute max-w-5xl w-full ease-in-out duration-300 ${selectedTalent === "desin" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-90 pointer-events-none translate-x-0"}`}>
-                    <TalentMusic />
+                    <TalentCyber />
                 </div>
             </div>
         </section>

@@ -7,6 +7,7 @@ export default function AudioPlayer({ title, src }) {
     const [isPlaying, setIsPlaying] = useState(false)
     const [duration, setDuration] = useState(null)
     const [currentTime, setCurrentTime] = useState(0)
+    const [isLoaded, setIsLoaded] = useState(false)
 
     const audioRef = useRef()
     const progressBar = useRef()
@@ -14,6 +15,7 @@ export default function AudioPlayer({ title, src }) {
 
     function updateData() {
         setDuration(audioRef.current.duration);
+        setIsLoaded(true)
     }
 
     function audioJump(amount) {
@@ -72,14 +74,18 @@ export default function AudioPlayer({ title, src }) {
                 </button> */}
 
                 {/* Play / Pause Button */}
-                <button className="lg:hover:scale-110 scale-100 ease-out duration-150" onClick={() => togglePlayState()}>
-                    {isPlaying ? (
-                        <Image src="/svg/pause2.svg" width={25} height={25} alt="pause button" className="invert w-6 h-6" />
-                    ) : (
-                        <Image src="/svg/play.svg" width={25} height={25} alt="pause button" className="invert w-6 h-6" />
-                    )}
-                </button>
-                
+                {isLoaded ? (
+                    <button className="lg:hover:scale-110 scale-100 ease-out duration-150" onClick={() => togglePlayState()}>
+                        {isPlaying ? (
+                            <Image src="/svg/pause2.svg" width={25} height={25} alt="pause button" className="invert w-6 h-6" />
+                        ) : (
+                            <Image src="/svg/play.svg" width={25} height={25} alt="pause button" className="invert w-6 h-6" />
+                        )}
+                    </button>
+                ) : (
+                    <Image src="/svg/loader.svg" width={25} height={25} alt="loading" className="w-6 h-6" />
+                )}
+
                 {/* <button className="" onClick={() => audioJump(10)}>
                     <Image src="/svg/arrow-forward.svg" width={25} height={25} alt="pause button" className="invert w-5 h-5 opacity-70" />
                 </button> */}

@@ -1,12 +1,7 @@
-import { useState, useEffect } from "react"
-import Image from "next/image"
-
 import AudioPlayer from "./AudioPlayer"
 import List from "./List"
 
 export default function TalentMusic() {
-    const [song, setSong] = useState(null)
-
     const productionList = [
         `I primarly use FL Studio for recording and editing vocals.`,
         `To make it easier for me, I have hand crafted a template for myself pre-loaded with my vocal chain and recording tracks.`,
@@ -34,13 +29,13 @@ export default function TalentMusic() {
     ]
 
     const music = [
-        { title: "Manuela",     src: "/mp3/Manuela.mp3" },
-        { title: "M.i.a",       src: "/mp3/M.i.a.mp3" },
-        { title: "I DONT",      src: "/mp3/I DONT.mp3" },
-        { title: "Same",        src: "/mp3/Same.mp3" },
-        { title: "Selfish",     src: "/mp3/Selfish.mp3" },
-        { title: "Confusing",   src: "/mp3/Confusing.mp3" },
-        { title: "Another Day", src: "/mp3/Another Day.mp3" }
+        { title: "Manuela",     src: "https://ben-portfolio-green.vercel.app/mp3/Manuela.mp3" },
+        { title: "M.i.a",       src: "https://ben-portfolio-green.vercel.app/mp3/M.i.a.mp3" },
+        { title: "I DONT",      src: "https://ben-portfolio-green.vercel.app/mp3/I DONT.mp3" },
+        { title: "Same",        src: "https://ben-portfolio-green.vercel.app/mp3/Same.mp3" },
+        { title: "Selfish",     src: "https://ben-portfolio-green.vercel.app/mp3/Selfish.mp3" },
+        { title: "Confusing",   src: "https://ben-portfolio-green.vercel.app/mp3/Confusing.mp3" },
+        { title: "Another Day", src: "https://ben-portfolio-green.vercel.app/mp3/Another Day.mp3" }
     ]
 
     return (
