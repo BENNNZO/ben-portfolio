@@ -1,7 +1,13 @@
+"use client"
+
+import { useState } from "react"
+
 import AudioPlayer from "./AudioPlayer"
 import List from "./List"
 
 export default function TalentMusic() {
+    const [playing, setPlaying] = useState()
+
     const productionList = [
         `I primarly use FL Studio for recording and editing vocals.`,
         `To make it easier for me, I have hand crafted a template for myself pre-loaded with my vocal chain and recording tracks.`,
@@ -41,9 +47,10 @@ export default function TalentMusic() {
     return (
         <>
             <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left">TOP TRACKS</h3>
+            <p>{playing}</p>
             <div className="flex flex-col flex-wrap gap-4 mt-4">
                 {music.map((song, index) => (
-                    <AudioPlayer key={index} title={song.title} src={song.src}/>
+                    <AudioPlayer key={index} title={song.title} playing={playing} setPlaying={setPlaying} src={song.src}/>
                 ))}
             </div>
 
@@ -51,7 +58,6 @@ export default function TalentMusic() {
             <ul className={"md:flex md:flex-row sm:grid sm:grid-cols-2 flex flex-col justify-between gap-12 mt-4"}>
                 {skillsList.map((item, index) => (
                     <li key={index} className="bg-purple-950/20 border border-purple-950/50 backdrop-blur-sm w-full rounded-md py-8">
-                        {/* <div className="w-2 h-2 bg-purple-400 rounded-full absolute -translate-x-6 translate-y-2"></div> */}
                         <div className="flex flex-col gap-2 items-center">
                             <p className="text-4xl font-bold text-shine-purple">{item.length}</p>
                             <p className="font-bold">Years</p>

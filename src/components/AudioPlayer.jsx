@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 
-export default function AudioPlayer({ title, src }) {
+export default function AudioPlayer({ title, src, playing, setPlaying }) {
     const [isPlaying, setIsPlaying] = useState(false)
     const [duration, setDuration] = useState(null)
     const [currentTime, setCurrentTime] = useState(0)
@@ -12,6 +12,18 @@ export default function AudioPlayer({ title, src }) {
     const audioRef = useRef()
     const progressBar = useRef()
     const animationRef = useRef()
+
+    useEffect(() => {
+        if (playing !== title) {
+            audioRef.current.pause()
+            cancelAnimationFrame(animationRef.current)
+            setIsPlaying(false)
+        }
+    }, [playing])
+
+    useEffect(() => {
+        if (isPlaying) setPlaying(title)
+    }, [isPlaying])
 
     function updateData() {
         setDuration(audioRef.current.duration);
