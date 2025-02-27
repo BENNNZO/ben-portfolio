@@ -47,7 +47,6 @@ export default function TalentMusic() {
     return (
         <>
             <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left">TOP TRACKS</h3>
-            <p>{playing}</p>
             <div className="flex flex-col flex-wrap gap-4 mt-4">
                 {music.map((song, index) => (
                     <AudioPlayer key={index} title={song.title} playing={playing} setPlaying={setPlaying} src={song.src}/>
