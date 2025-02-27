@@ -9,9 +9,9 @@ export default function TalentCoding() {
     const [info, setInfo] = useState(null)
 
     const relevantInformation = [
-        "I am familiar with Powershell, Batch, and Bash. I've used both Linux and Windows terminals extensivly and would say I'm quite proficient in all of them.",
-        "Even though this section of my portfolio talks about web development I have done a decent amount of python as well. Most of my python projects are for automating a simple task or web scraping data.",
-        "As far as lower level programming languages go, I have dabbled in Rust and C++. I understand both languages but I would not say I am fluent in either of them. Mainly because I have never had a real reason to learn those languages other just than for fun.",
+        "I have a strong familiarity with PowerShell, Batch, and Bash. I have extensively used both Linux and Windows terminals and consider myself highly proficient in all of them.",
+        "Although this section of my portfolio focuses on web development, I have also worked extensively with Python. Most of my Python projects involve automating simple tasks or web scraping data.",
+        "In terms of lower-level programming languages, I have experimented with Rust and C++. I have a basic understanding of both, though I wouldn't consider myself fluent, primarily because I've explored them more for enjoyment than necessity.",
     ]
 
     const projects = [
