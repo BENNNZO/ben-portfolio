@@ -7,6 +7,7 @@ import Header from "./Header"
 import TalentCyber from "./TalentCyber"
 import TalentMusic from "./TalentMusic"
 import TalentCoding from "./TalentCoding"
+import TalentEditing from "./TalentEditing"
 
 export default function Talents() {
     const searchParams = useSearchParams()
@@ -53,7 +54,7 @@ export default function Talents() {
                     <TalentCyber />
                 </div>
                 <div className={`absolute max-w-5xl w-full ease-in-out duration-300 ${selectedTalent === "desin" ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-90 pointer-events-none translate-x-0"}`}>
-                    <TalentCyber />
+                    <TalentEditing />
                 </div>
             </div>
         </section>
