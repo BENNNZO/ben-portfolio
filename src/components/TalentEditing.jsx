@@ -1,6 +1,13 @@
 import Image from "next/image"
+import List from "./List"
 
 export default function TalentEditing() {
+    const relevantInformation = [
+        "I edit mainly in Davinchi but I have also used Adobe Premier and Sony Vegas.",
+        "I also used Blender and Affinity Designer to create many of my thumbnails and banners.",
+        "Majority of these videos I spent roughly 30+ hours in total. From recording to editing to designing I did it all!"
+    ]
+
     const videos = [
         {
             title: "I Made Cookie Clicker In MINECRAFT!",
@@ -31,11 +38,11 @@ export default function TalentEditing() {
     return (
         <>
 
-            {/* PROJECTS */}
+            {/* VIDEOS */}
             {/* <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left mt-8 lg:mt-0">BANNER</h3> */}
-            {/* <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left mt-4">VIDEOS</h3> */}
+            {/* <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left mt-4">@HOTDOGMANS</h3> */}
             <div className="relative">
-                <Image src="/img/channel banner.jpg" alt="channel banner" className="rounded-md" width={1024} height={500} />
+                <Image src="/img/channel banner.jpg" alt="channel banner" className="rounded-md lg:h-52 md:h-44 h-36 object-cover" width={1024} height={500} />
             </div>
             <div className="md:grid md:grid-cols-2 md:grid-rows-3 gap-2 my-2 flex flex-col relative">
                 {videos.map((video, index) => (
@@ -43,13 +50,15 @@ export default function TalentEditing() {
                         key={index}
                         src={video.url}
 
-                        title={video.title} 
+                        title={video.title}
                         allowFullScreen
-                        className="aspect-video w-full rounded-md" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        className="aspect-video w-full rounded-md"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     ></iframe>
                 ))}
             </div>
+            <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left mt-4">RELEVANT INFORMATION</h3>
+            <List list={relevantInformation} />
         </>
     )
 }
