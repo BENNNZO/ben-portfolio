@@ -78,6 +78,7 @@ input[type="range"]::-moz-range-thumb {
     right: 0;
     bottom: 0;
     box-shadow: inset 0px -100px 200px black, inset 0px -50px 50px black;
+    pointer-events: none;
 }
 
 .hero-pulse {

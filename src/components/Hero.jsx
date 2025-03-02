@@ -3,6 +3,11 @@
 import Image from "next/image"
 
 export default function Hero() {
+    function handleDownload() {
+        const link = document.createElement('a[href="/pdf/test.txt"][target="_blank"]')
+
+    }
+
     return (
         <section className="h-screen flex lg:flex-row flex-col-reverse lg:justify-around justify-center lg:gap-0 gap-24 items-center overflow-hidden relative hero-box-shadow">
             {/* BUBBLES */}
@@ -12,8 +17,10 @@ export default function Hero() {
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-52 bg-gradient-to-b from-transparent to-black blur-xl"></div>
             
             {/* CONTENT */}
-            <div className="relative flex flex-col gap-2">
+            <div className="relative flex flex-col lg:items-start items-center justify-center gap-2">
                 <p className="font-bold md:text-6xl text-4xl">HEY, I'M <span className="text-shine-purple">BEN</span>!</p>
+                <a href="/pdf/test.txt" download="Resume" target="_blank" className="px-4 py-2 bg-black/10 hover:shadow-md hover:bg-black/0 duration-150 ease-out backdrop-blur-sm border border-purple-400/20 rounded-md cursor-pointer">Download Resume</a>
+                {/* <button onClick={handleDownload} className="px-4 py-2 bg-black/20 backdrop-blur-sm border border-purple-400/20 rounded-md font-bold cursor-pointer">Download Resume</button> */}
                 <div className="w-24 h-8 bg-purple-400 blur-xl absolute top-3 right-8 md:opacity-50 opacity-0"></div>
             </div>
 
