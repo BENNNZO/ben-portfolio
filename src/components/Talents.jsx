@@ -13,7 +13,7 @@ export default function Talents() {
     const searchParams = useSearchParams()
     const talent = searchParams.get("talent")
 
-    const [selectedTalent, setSelectedTalent] = useState(talent || "cyber")
+    const [selectedTalent, setSelectedTalent] = useState(talent || "coder")
 
     return (
         <section className="w-full relative flex flex-col items-center">
