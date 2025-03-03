@@ -114,7 +114,7 @@ export default function TalentCoding() {
             <div className="flex flex-row flex-wrap lg:justify-between justify-center gap-4 my-4">
                 {skills.map((skill, index) => (
                     <div className="relative group" key={index}>
-                        <Image src={skill.source} width={100} height={100} alt={skill.alt} className="lg:w-24 lg:h-24 md:w-16 md:h-16 w-12 h-12 invert blur-md group-hover:blur-md duration-300 ease-out absolute top-0 left-0 opacity-50" />
+                        <Image src={skill.source} width={100} height={100} alt={skill.alt} className="lg:w-24 lg:h-24 md:w-16 md:h-16 w-12 h-12 invert blur-md group-hover:blur-md duration-300 ease-out absolute top-0 left-0 opacity-30" />
                         <Image src={skill.source} width={100} height={100} alt={skill.alt} className="lg:w-24 lg:h-24 md:w-16 md:h-16 w-12 h-12 invert -translate-y-0 group-hover:-translate-y-4 duration-300 ease-out" />
                         <p className="text-center opacity-0 hidden w-full lg:inline-block group-hover:opacity-100 duration-200 ease-out">{skill.title}</p>
                     </div>
@@ -126,11 +126,11 @@ export default function TalentCoding() {
             <div className="md:grid md:grid-cols-2 md:grid-rows-3 gap-2 my-4 flex flex-col relative">
                 {projects.map((project, index) => (
                     <div key={index} className="aspect-[3/2] relative rounded-md group lg:scale-95 lg:hover:scale-100 duration-200 ease-out">
-                        <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out blur-xl group-hover:blur-2xl opacity-50 group-hover:opacity-75" />
+                        <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out blur-xl group-hover:blur-2xl opacity-30 group-hover:opacity-50" />
                         <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out opacity-100" />
                         <Image onClick={() => setInfo(project.title)} src="/svg/info2.svg" width={35} height={35} alt="more info" className="absolute top-4 right-4 mix-blend-difference invert rounded-full group-hover:opacity-100 lg:opacity-0 opacity-100 duration-200 ease-out cursor-pointer hover:scale-110" />
 
-                        {/* PROJECT INFO MODALS */}
+                        {/* PROJECT INFO MODALS MOBILE */}
                         <div className={`absolute md:hidden flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 pt-2 pb-4 bg-black/80 border border-white/20 backdrop-blur-lg w-full h-full rounded-md shadow-lg ${info === project.title ? "opacity-100 pointer-events-auto scale-100" : "opacity-0 pointer-events-none scale-90"} duration-300 ease-out`}>
                             <div className="flex flex-row justify-between items-center mb-4 mt-2">
                                 <p className={`text-4xl font-bold text-center uppercase text-shine-purple`}>{project.title}</p>
@@ -142,7 +142,7 @@ export default function TalentCoding() {
                     </div>
                 ))}
 
-                {/* PROJECT INFO MODALS */}
+                {/* PROJECT INFO MODALS DESKTOP */}
                 <div className="absolute hidden md:block top-0 left-0 w-full h-full pointer-events-none">
                     {projects.map((project, index) => (
                         <div key={index} className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 pt-2 pb-4 bg-black/80 border border-white/20 backdrop-blur-lg w-full max-w-3xl rounded-xl shadow-lg ${info === project.title ? "opacity-100 pointer-events-auto scale-100" : "opacity-0 pointer-events-none scale-90"} duration-300 ease-out`}>
