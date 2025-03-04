@@ -12,7 +12,7 @@ export default function Hero() {
             {/* CONTENT */}
             <div className="relative flex flex-col lg:items-start items-center justify-center gap-2">
                 <p className="font-bold md:text-6xl text-4xl">HEY, I'M <span className="text-shine-purple">BEN</span>!</p>
-                <a href="/pdf/test.txt" download="Resume" target="_blank" className="px-4 py-2 bg-black/10 hover:shadow-md hover:bg-black/0 duration-150 ease-out backdrop-blur-sm border border-purple-400/20 rounded-md cursor-pointer">Download Resume</a>
+                <a href="/pdf/Resume.pdf" download="Resume" target="_blank" className="px-4 py-2 bg-black/10 hover:shadow-md hover:bg-black/0 duration-150 ease-out backdrop-blur-sm border border-purple-400/20 rounded-md cursor-pointer">Download Resume</a>
                 <div className="w-24 h-8 bg-purple-400 blur-xl absolute top-3 right-8 md:opacity-50 opacity-0"></div>
             </div>
 
