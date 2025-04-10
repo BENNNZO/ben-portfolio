@@ -109,8 +109,27 @@ export default function Home() {
                         <h1 className="tracking-wider font-extrabold text-8xl z-10" style={{ filter: "drop-shadow(0 5px 5px black)" }}>live-f1.com</h1>
                     </div>
                     <div className="w-full h-px mx-auto bg-gradient-to-r from-transparent via-white to-transparent"></div>
+                    <section className="max-w-4xl mt-12 flex-col mx-auto">
+                        <h2 className="text-4xl font-bold">FEATURES</h2>
+                    </section>
+                    <section className="max-w-4xl mt-12 flex-col mx-auto">
+                        <div className="flex flex-col gap-4">
+                            <div className="flex flex-col gap-2 border border-white/20 rounded-lg px-4 py-3 bg-zinc-950/30">
+                                <h2 className="text-xl font-bold">What Is live-f1.com?</h2>
+                                <p>This is a real-time formula 1 telemetry and data dashboard. Within the dashboard you will find <Strong text="track positions" />, <Strong text="lap times" />, <Strong text="sector times" />, <Strong text="intervals" />, <Strong text="weather" />, <Strong text="race control messages" />, and even <Strong text="live team radios" />. There is also a real-time circuit with drivers that move on the track in real-time!</p>
+                            </div>
+                            <div className="flex flex-col gap-2 border border-white/20 rounded-lg px-4 py-3 bg-zinc-950/30">
+                                <h2 className="text-xl font-bold">How Was It Built?</h2>
+                                <p>I built this project from scratch starting with just `npx create-next-app@latest`. The main technologies I used are: <Strong text="NodeJS" />, <Strong text="NextJS" />, <Strong text="Tailwind" />, <Strong text="Zustand" />, and <Strong text="Websockets" />. I had to build a custom websocket server so that I could push the f1 data to the client as the f1 websocket does not allow client side connections.</p>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         )
     }
+}
+
+function Strong({ text }) {
+    return <span className="font-bold text-amber-400">{text}</span>
 }
