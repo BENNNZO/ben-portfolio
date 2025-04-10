@@ -58,8 +58,3 @@ export default function Education() {
         </section>
     )
 }
-
-// GMC Cyber security degree
-// Georgia Tech Web dev Boot camp
-// Lake side high
-// middle school

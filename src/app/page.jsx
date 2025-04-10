@@ -8,7 +8,6 @@ import Hero from "@/components/Hero"
 import Education from "@/components/Education";
 import Talents from "@/components/Talents";
 import Contacts from "@/components/Contacts";
-import TaskList from "@/components/TaskList"
 
 export default function Home() {
     const [init, setInit] = useState(false);
@@ -96,7 +95,6 @@ export default function Home() {
                     <Education />
                     <Contacts />
                 </div>
-                {/* <TaskList /> */}
             </div>
         )
     }

@@ -37,13 +37,7 @@ export default function TalentEditing() {
 
     return (
         <>
-
-            {/* VIDEOS */}
-            {/* <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left mt-8 lg:mt-0">BANNER</h3> */}
-            {/* <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left mt-4">@HOTDOGMANS</h3> */}
             <Image src="/img/channel banner.jpg" alt="channel banner" className="rounded-md lg:h-52 md:h-44 h-36 object-cover mb-2" width={1024} height={500} />
-            {/* <div className="h-px bg-white/50 w-full my-4"></div> */}
-            {/* <div className="h-px bg-gradient-to-r from-transparent via-white/50 to-transparent w-full mt-2"></div> */}
             <div className="md:grid md:grid-cols-2 md:grid-rows-3 gap-2 mb-2 flex flex-col relative">
                 {videos.map((video, index) => (
                     <iframe
