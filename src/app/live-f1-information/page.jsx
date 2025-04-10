@@ -11,6 +11,7 @@ import { JetBrains_Mono } from "next/font/google";
 
 const jetBrainsMono = JetBrains_Mono({
     weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+    subsets: ["latin"]
 });
 
 export default function Home() {
