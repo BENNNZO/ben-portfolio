@@ -51,7 +51,7 @@ export default function TalentEditing() {
                     ></iframe>
                 ))}
             </div>
-            <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left mt-4">RELEVANT INFORMATION</h3>
+            <h3 className="text-shine-purple text-4xl font-bold text-center lg:text-left mt-4">RELEVANT INFORMATION</h3>
             <List list={relevantInformation} />
         </>
     )
