@@ -89,11 +89,11 @@ export default function Home() {
         return (
             <div className="bg-black text-white">
                 <Particles options={options} />
-                <Hero />
+                {/* <Hero /> */}
                 <div className="px-4 md:px-8 lg:px-0">
                     <Talents />
-                    <Education />
-                    <Contacts />
+                    {/* <Education /> */}
+                    {/* <Contacts /> */}
                 </div>
             </div>
         )

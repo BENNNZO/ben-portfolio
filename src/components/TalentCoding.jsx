@@ -110,7 +110,7 @@ export default function TalentCoding() {
     return (
         <>
             {/* TECH STACK */}
-            <h3 className="text-shine-purple text-4xl font-bold lg:pl-2 whitespace-nowrap text-center lg:text-left">TECH STACK</h3>
+            <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left">TECH STACK</h3>
             <div className="flex flex-row flex-wrap lg:justify-between justify-center gap-4 my-4">
                 {skills.map((skill, index) => (
                     <div className="relative group flex flex-col gap-2" key={index}>
@@ -121,8 +121,42 @@ export default function TalentCoding() {
                 ))}
             </div>
 
+            {/* TOP PROJECT */}
+            <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left mt-8">TOP PROJECT - LIVE F1</h3>
+            <div className="flex flex-row gap-2 mt-4">
+                <p className="bg-zinc-800/00 border z-10 border-purple-500/20 text-purple-300 backdrop-blur rounded-full px-3 py-1">Real Time F1 Telemetry and Data</p>
+                <p className="bg-zinc-800/00 border z-10 border-purple-500/20 text-purple-300 backdrop-blur rounded-full px-3 py-1">Custom WebSocket Server</p>
+                <p className="bg-zinc-800/00 border z-10 border-purple-500/20 text-purple-300 backdrop-blur rounded-full px-3 py-1">NextJS Frontend</p>
+                <p className="bg-zinc-800/00 border z-10 border-purple-500/20 text-purple-300 backdrop-blur rounded-full px-3 py-1">Tailwind Styling</p>
+                {/* <p className="bg-zinc-800/50 border border-white/30 backdrop-blur rounded-full px-3 py-1">Skeleton Loading</p> */}
+                {/* <p className="bg-zinc-800/50 border border-white/30 backdrop-blur rounded-full px-3 py-1">Responsive Design</p> */}
+            </div>
+            <div className="relative rounded-lg duration-200 ease-out mt-2">
+                <Image src="/img/projects/live-f1.png" width={1920} height={1080} alt="live-f1 project image" className="rounded-lg" />
+                <div className="absolute top-0 left-0 w-full h-full rounded-lg overflow-hidden blur-3xl">
+                    <div className="absolute top-0 left-0 w-full h-full conic-gradient"></div>
+                </div>
+                <div className="absolute top-0 left-0 w-full h-full rounded-lg overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-full conic-gradient"></div>
+                </div>
+                <Image src="/img/projects/live-f1.png" width={1920} height={1080} alt="live-f1 project image" className="rounded-lg absolute top-px left-px w-[calc(100%-2px)] h-[calc(100%-2px)]" />
+                <div className="absolute top-4 right-4 flex flex-col gap-2 items-end">
+                    <a className="bg-zinc-900/70 border z-10 border-purple-400/50 backdrop-blur rounded-full px-3 py-1 flex flex-row gap-2 items-center relative group" href="https://live-f1.com" target="_blank">
+                        <p className="group-hover:mr-5 text-purple-300 duration-200 ease-out relative">
+                            https://live-f1.com
+                            <span className="absolute bottom-1 left-0 w-0 h-px bg-purple-300 group-hover:w-full duration-200 ease-out"></span>
+                        </p>
+                        <Image src="/svg/open.svg" width={20} height={20} alt="open link" className="absolute opacity-0 group-hover:opacity-100 duration-200 ease-out top-1/2 -translate-y-1/2 right-2 invert rounded-full aspect-square h-full" />
+                    </a>
+                    <a className="bg-zinc-900/70 border z-10 border-purple-400/50 backdrop-blur rounded-full px-3 py-1 flex flex-row gap-2 items-center relative group" href="/live-f1-information">
+                        <p className="group-hover:mr-5 text-purple-300 duration-200 ease-out relative">More Info</p>
+                        <Image src="/svg/open.svg" width={20} height={20} alt="open link" className="absolute opacity-0 group-hover:opacity-100 duration-200 ease-out top-1/2 -translate-y-1/2 right-2 invert rounded-full aspect-square h-full" />
+                    </a>
+                </div>
+            </div>
+
             {/* PROJECTS */}
-            <h3 className="text-shine-purple text-4xl font-bold lg:pl-2 whitespace-nowrap text-center lg:text-left mt-8 lg:mt-0">PROJECTS</h3>
+            <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left mt-8">PROJECTS</h3>
             <div className="md:grid md:grid-cols-2 md:grid-rows-3 gap-2 my-4 flex flex-col relative">
                 {projects.map((project, index) => (
                     <div key={index} className="aspect-[3/2] relative rounded-md group lg:scale-95 lg:hover:scale-100 duration-200 ease-out">
@@ -159,7 +193,7 @@ export default function TalentCoding() {
 
 
             {/* RELEVANT INFORMATION */}
-            <h3 className="text-shine-purple text-4xl font-bold pl-2 whitespace-normal md:whitespace-nowrap mt-8">RELEVANT INFORMATION</h3>
+            <h3 className="text-shine-purple text-4xl font-bold whitespace-normal md:whitespace-nowrap mt-8">RELEVANT INFORMATION</h3>
             <List list={relevantInformation} style="mb-24" />
         </>
     )
