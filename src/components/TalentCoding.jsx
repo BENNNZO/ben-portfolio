@@ -102,7 +102,7 @@ export default function TalentCoding() {
         },
         {
             source: "/img/Skills/logo-tailwind.svg",
-            title: "Tailwind CSS",
+            title: "Tailwind",
             alt: "skill-tailwind",
         },
     ]
@@ -113,10 +113,10 @@ export default function TalentCoding() {
             <h3 className="text-shine-purple text-4xl font-bold lg:pl-2 whitespace-nowrap text-center lg:text-left">TECH STACK</h3>
             <div className="flex flex-row flex-wrap lg:justify-between justify-center gap-4 my-4">
                 {skills.map((skill, index) => (
-                    <div className="relative group" key={index}>
+                    <div className="relative group flex flex-col gap-2" key={index}>
                         <Image src={skill.source} width={100} height={100} alt={skill.alt} className="lg:w-24 lg:h-24 md:w-16 md:h-16 w-12 h-12 invert blur-md group-hover:blur-md duration-300 ease-out absolute top-0 left-0 opacity-30" />
                         <Image src={skill.source} width={100} height={100} alt={skill.alt} className="lg:w-24 lg:h-24 md:w-16 md:h-16 w-12 h-12 invert -translate-y-0 group-hover:-translate-y-4 duration-300 ease-out" />
-                        <p className="text-center opacity-0 hidden w-full lg:inline-block group-hover:opacity-100 duration-200 ease-out">{skill.title}</p>
+                        <p className="text-center opacity-50 tracking-wider group-hover:tracking-normal hidden w-full lg:inline-block group-hover:opacity-100 duration-200 ease-out">{skill.title}</p>
                     </div>
                 ))}
             </div>
