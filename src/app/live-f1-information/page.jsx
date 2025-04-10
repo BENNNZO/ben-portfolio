@@ -105,7 +105,7 @@ export default function Home() {
 
                     {/* HERO */}
                     <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-52 relative">
-                        <Image src="/img/projects/live-f1.png" width={1920} height={1080} alt="live f1 image" className="absolute top-0 left-0 w-full h-full object-cover opacity-30 object-top" />
+                        <Image src="/img/Projects/live-f1.png" width={1920} height={1080} alt="live f1 image" className="absolute top-0 left-0 w-full h-full object-cover opacity-30 object-top" />
                         <Image src="/svg/live-f1-logo.svg" width={100} height={100} alt="Live F1 Logo" className="border-2 border-white/20 z-10 rounded-full" style={{ filter: "drop-shadow(0 5px 5px black)" }} />
                         <a className="tracking-wider font-extrabold z-10 group cursor-pointer" href="https://live-f1.com" target="_blank" style={{ filter: "drop-shadow(0 5px 5px black)" }}>
                             <h1 className="text-center text-4xl sm:text-6xl md:text-8xl">live-f1.com</h1>

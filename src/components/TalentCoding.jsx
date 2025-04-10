@@ -131,14 +131,14 @@ export default function TalentCoding() {
                 <p className="bg-zinc-800/00 border z-10 border-purple-500/20 text-purple-300 backdrop-blur rounded-full px-3 py-1">Tailwind Styling</p>
             </div>
             <div className="relative rounded-lg duration-200 ease-out mt-2">
-                <Image src="/img/projects/live-f1.png" width={1022} height={528} alt="live-f1 project image" quality={0} className="rounded-lg" />
+                <Image src="/img/Projects/live-f1.png" width={1022} height={528} alt="live-f1 project image" quality={0} className="rounded-lg" />
                 <div className="absolute top-0 left-0 w-full h-full rounded-lg overflow-hidden blur-3xl">
                     <div className="absolute top-0 left-0 w-full h-full conic-gradient"></div>
                 </div>
                 <div className="absolute top-0 left-0 w-full h-full rounded-lg overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-full conic-gradient"></div>
                 </div>
-                <Image src="/img/projects/live-f1.png" width={1022} height={528} alt="live-f1 project image" placeholder="blur" quality={100} blurDataURL="/img/projects/live-f1-blur.jpg" className="rounded-lg absolute top-px left-px w-[calc(100%-2px)] h-[calc(100%-2px)]" />
+                <Image src="/img/Projects/live-f1.png" width={1022} height={528} alt="live-f1 project image" placeholder="blur" quality={100} blurDataURL="/img/projects/live-f1-blur.jpg" className="rounded-lg absolute top-px left-px w-[calc(100%-2px)] h-[calc(100%-2px)]" />
                 <div className="absolute top-4 right-4 flex flex-col gap-2 items-end">
                     <a className="bg-zinc-900/70 border z-10 border-purple-400/50 backdrop-blur rounded-full px-3 py-1 flex flex-row gap-2 items-center relative group" href="https://live-f1.com" target="_blank">
                         <p className="group-hover:mr-5 text-purple-300 duration-200 ease-out relative">
