@@ -18,8 +18,8 @@ export default function Hero() {
 
             <div className="relative md:w-96 md:h-96 w-72 h-72 rounded-full md:bottom-16">
                 <div className="bg-purple-900 absolute-center w-44 h-44 blur-3xl opacity-50"></div>
-                <Image src="/img/profile.png" alt="Profile Picture" width={500} height={500} className="w-full h-full aspect-square object-cover scale-110 bottom-2 left-2 absolute drop-shadow-lg rounded-full blur-lg opacity-70" />
-                <Image src="/img/profile.png" alt="Profile Picture" width={500} height={500} className="w-full h-full aspect-square object-cover scale-110 bottom-2 left-2 relative drop-shadow-lg rounded-full" />
+                <Image src="/img/profile.png" alt="Profile Picture" width={500} height={500} quality={0} className="w-full h-full aspect-square object-cover scale-110 bottom-2 left-2 absolute drop-shadow-lg rounded-full blur-lg opacity-70" />
+                <Image src="/img/profile.png" alt="Profile Picture" width={500} height={500} quality={100} priority loading="eager" className="w-full h-full aspect-square object-cover scale-110 bottom-2 left-2 relative drop-shadow-lg rounded-full" />
             </div>
 
             <Image src="/svg/arrow.svg" width={25} height={25} alt="scroll down arrow" className="absolute bottom-24 left-1/2 -translate-x-1/2 animate-pulse rotate-90" />
