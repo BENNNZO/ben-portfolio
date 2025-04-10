@@ -4,7 +4,18 @@ import { useMemo, useEffect, useState } from "react";
 import { loadSlim } from "@tsparticles/slim";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 
+import { useRouter } from "next/navigation";
+import Image from "next/image";
+
+import { JetBrains_Mono } from "next/font/google";
+
+const jetBrainsMono = JetBrains_Mono({
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+});
+
 export default function Home() {
+    const router = useRouter()
+
     const [init, setInit] = useState(false);
 
     useEffect(() => {
@@ -82,10 +93,14 @@ export default function Home() {
 
     if (init) {
         return (
-            <div className="bg-black text-white min-h-screen">
+            <div className={`bg-black text-white min-h-screen ${jetBrainsMono.className}`}>
                 <Particles options={options} />
                 <div className="px-4 md:px-8 lg:px-0">
-                    hello world
+                    {/* BACK BUTTON */}
+                    <button onClick={() => router.push("/")} className="fixed top-4 left-4 hover:pl-8 duration-200 ease-out bg-zinc-900/70 text-purple-200 border z-10 border-purple-400/50 backdrop-blur rounded-full px-3 py-1 flex flex-row gap-2 items-center relative group">
+                        Back Home
+                        <Image src="/svg/open.svg" width={20} height={20} alt="open link" className="absolute -rotate-90 opacity-0 group-hover:opacity-100 duration-200 ease-out top-1/2 -translate-y-1/2 left-2 invert rounded-full aspect-square h-full" />
+                    </button>
                 </div>
             </div>
         )
