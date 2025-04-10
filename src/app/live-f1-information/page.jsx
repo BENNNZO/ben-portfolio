@@ -95,19 +95,20 @@ export default function Home() {
         return (
             <div className={`bg-black text-white min-h-screen ${jetBrainsMono.className}`}>
                 <Particles options={options} />
-                <div className="px-4 md:px-8 lg:px-0">
+                <div className="">
                     {/* BACK BUTTON */}
-                    <button onClick={() => router.push("/")} className="fixed top-4 left-4 hover:pl-8 duration-200 ease-out bg-zinc-900/50 text-yellow-200 border z-10 border-yellow-400/50 backdrop-blur-sm rounded-full px-3 py-1 flex flex-row gap-2 items-center relative group">
+                    <button onClick={() => router.push("/")} className="fixed top-4 left-4 hover:pl-8 duration-200 ease-out bg-zinc-900/50 text-yellow-200 border z-10 border-yellow-400/50 backdrop-blur-sm rounded-full px-3 py-1 group">
                         Back Home
                         <Image src="/svg/open.svg" width={20} height={20} alt="open link" className="absolute -rotate-90 opacity-0 group-hover:opacity-100 duration-200 ease-out top-1/2 -translate-y-1/2 left-2 invert rounded-full aspect-square h-full" />
                     </button>
 
                     {/* HERO */}
-                    <div className="flex items-center justify-center gap-4 py-52">
-                        <Image src="/svg/live-f1-logo.svg" width={100} height={100} alt="Live F1 Logo" className="border-2 border-white/20 rounded-full" />
-                        <h1 className="tracking-wider font-extrabold text-8xl">live-f1.com</h1>
+                    <div className="flex items-center justify-center gap-4 py-52 relative">
+                        <Image src="/img/projects/live-f1.png" width={1920} height={1080} alt="live f1 image" className="absolute top-0 left-0 w-full h-full object-cover opacity-30 object-top" />
+                        <Image src="/svg/live-f1-logo.svg" width={100} height={100} alt="Live F1 Logo" className="border-2 border-white/20 z-10 rounded-full" style={{ filter: "drop-shadow(0 5px 5px black)" }} />
+                        <h1 className="tracking-wider font-extrabold text-8xl z-10" style={{ filter: "drop-shadow(0 5px 5px black)" }}>live-f1.com</h1>
                     </div>
-                    <div className="w-1/2 h-px mx-auto bg-gradient-to-r from-transparent via-white to-transparent"></div>
+                    <div className="w-full h-px mx-auto bg-gradient-to-r from-transparent via-white to-transparent"></div>
                 </div>
             </div>
         )
