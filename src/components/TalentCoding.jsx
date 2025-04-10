@@ -122,14 +122,13 @@ export default function TalentCoding() {
             </div>
 
             {/* TOP PROJECT */}
-            <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left mt-8">TOP PROJECT - LIVE F1</h3>
-            <div className="flex flex-row gap-2 mt-4">
+            <h3 className="text-shine-purple text-4xl font-bold text-center lg:hidden mt-8">TOP PROJECT</h3>
+            <h3 className="text-shine-purple text-4xl font-bold text-left hidden lg:block mt-8">TOP PROJECT - LIVE F1</h3>
+            <div className="flex flex-row gap-2 mt-4 flex-wrap">
                 <p className="bg-zinc-800/00 border z-10 border-purple-500/20 text-purple-300 backdrop-blur rounded-full px-3 py-1">Real Time F1 Telemetry and Data</p>
                 <p className="bg-zinc-800/00 border z-10 border-purple-500/20 text-purple-300 backdrop-blur rounded-full px-3 py-1">Custom WebSocket Server</p>
                 <p className="bg-zinc-800/00 border z-10 border-purple-500/20 text-purple-300 backdrop-blur rounded-full px-3 py-1">NextJS Frontend</p>
                 <p className="bg-zinc-800/00 border z-10 border-purple-500/20 text-purple-300 backdrop-blur rounded-full px-3 py-1">Tailwind Styling</p>
-                {/* <p className="bg-zinc-800/50 border border-white/30 backdrop-blur rounded-full px-3 py-1">Skeleton Loading</p> */}
-                {/* <p className="bg-zinc-800/50 border border-white/30 backdrop-blur rounded-full px-3 py-1">Responsive Design</p> */}
             </div>
             <div className="relative rounded-lg duration-200 ease-out mt-2">
                 <Image src="/img/projects/live-f1.png" width={1920} height={1080} alt="live-f1 project image" className="rounded-lg" />
@@ -171,7 +170,7 @@ export default function TalentCoding() {
                                 <Image src="/svg/close.svg" width={30} height={30} alt="close modal" className="rounded-full invert cursor-pointer"  onClick={() => setInfo(null)} />
                             </div>
                             <div className="w-full h-px bg-white/20"></div>
-                            <p className="mt-6 mb-2 text-lg">{project.description}</p>
+                            <p className="mt-6 mb-2 text-sm">{project.description}</p>
                         </div>
                     </div>
                 ))}
