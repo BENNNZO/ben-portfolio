@@ -1,4 +1,5 @@
 import Header from "./Header"
+import FadeIn from "./FadeIn"
 
 export default function Education() {
     const education = [
@@ -37,18 +38,23 @@ export default function Education() {
                 {education.map((e, i) => (
                     <li className="relative pl-8" key={`education-${i}`}>
                         <div className="absolute w-4 h-full top-3 left-0">
-                            <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-purple-400 rounded-full w-4 h-4 blur-md animate-pulse"></div>
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-gradient-to-b from-purple-400 to-transparent h-full w-px"></div>
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-purple-400 rounded-full w-4 h-4 blur-md animate-pulse"></div>
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-purple-500 rounded-full w-[11px] h-[11px]"></div>
                         </div>
-                        <h2 className="md:text-3xl text-2xl font-bold text-shine-purple">{e.title}</h2>
-                        <p className="font-semibold md:text-base text-sm text-purple-300">{e.degree}</p>
+                        <FadeIn>
+                            <h2 className="md:text-3xl text-2xl font-bold text-shine-purple">{e.title}</h2>
+                        </FadeIn>
+                        <FadeIn>
+                            <p className="font-semibold md:text-base text-sm text-purple-300">{e.degree}</p>
+                        </FadeIn>
                         <ul className="my-4 flex flex-col gap-2">
-                            {e.points.map((p, i) => (
-                                <li key={`education-point-${i}`} className="group hover:pl-2 ease-out duration-150">
-                                    <div style={{ filter: `brightness(${1 / (i + 1)})` }} className="group-hover:w-4 group-hover:h-4 group-hover:left-0 group-hover:translate-y-1 ease-out duration-150 bg-purple-400 backdrop-blur-3xl w-2 h-2 rounded-full absolute left-1 translate-y-2"></div>
-                                    <div style={{ filter: `brightness(${1 / (i + 1)})` }} className="group-hover:w-4 group-hover:h-4 group-hover:left-0 group-hover:translate-y-1 ease-out duration-150 bg-purple-400 backdrop-blur-3xl w-2 h-2 rounded-full absolute left-1 translate-y-2 blur-md animate-pulse"></div>
-                                    <p className="md:text-base text-sm">{p}</p>
+                            {e.points.map((point, index) => (
+                                <li key={`education-point-${index}`} className="group hover:pl-2 ease-out duration-150">
+                                    <div style={{ filter: `brightness(${1 / (index + 1)})` }} className="group-hover:w-4 group-hover:h-4 group-hover:left-0 group-hover:translate-y-1 ease-out duration-150 bg-purple-400 backdrop-blur-3xl w-2 h-2 rounded-full absolute left-1 translate-y-2"></div>
+                                    <FadeIn delay={0.1 * index}>
+                                        <p className="md:text-base text-sm">{point}</p>
+                                    </FadeIn>
                                 </li>
                             ))}
                         </ul>
