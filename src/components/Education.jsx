@@ -45,14 +45,14 @@ export default function Education() {
                         <FadeIn>
                             <h2 className="md:text-3xl text-2xl font-bold text-shine-purple">{e.title}</h2>
                         </FadeIn>
-                        <FadeIn>
+                        <FadeIn delay={0.1}>
                             <p className="font-semibold md:text-base text-sm text-purple-300">{e.degree}</p>
                         </FadeIn>
                         <ul className="my-4 flex flex-col gap-2">
                             {e.points.map((point, index) => (
                                 <li key={`education-point-${index}`} className="group hover:pl-2 ease-out duration-150">
                                     <div style={{ filter: `brightness(${1 / (index + 1)})` }} className="group-hover:w-4 group-hover:h-4 group-hover:left-0 group-hover:translate-y-1 ease-out duration-150 bg-purple-400 backdrop-blur-3xl w-2 h-2 rounded-full absolute left-1 translate-y-2"></div>
-                                    <FadeIn delay={0.1 * index}>
+                                    <FadeIn delay={(0.1 * index) + 0.2}>
                                         <p className="md:text-base text-sm">{point}</p>
                                     </FadeIn>
                                 </li>

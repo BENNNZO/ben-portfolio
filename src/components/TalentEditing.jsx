@@ -1,5 +1,6 @@
 import Image from "next/image"
 import List from "./List"
+import FadeIn from "./FadeIn"
 
 export default function TalentEditing() {
     const relevantInformation = [
@@ -37,21 +38,26 @@ export default function TalentEditing() {
 
     return (
         <>
-            <Image src="/img/channel banner.jpg" alt="channel banner" className="rounded-md lg:h-52 md:h-44 h-36 object-cover mb-2" width={1024} height={500} />
+            <FadeIn>
+                <Image src="/img/channel banner.jpg" alt="channel banner" className="rounded-md lg:h-52 md:h-44 h-36 object-cover mb-2" width={1024} height={500} />
+            </FadeIn>
             <div className="md:grid md:grid-cols-2 md:grid-rows-3 gap-2 mb-2 flex flex-col relative">
                 {videos.map((video, index) => (
-                    <iframe
-                        key={index}
-                        src={video.url}
+                    <FadeIn key={index} delay={0.1 * index}>
+                        <iframe
+                            src={video.url}
 
-                        title={video.title}
-                        allowFullScreen
-                        className="aspect-video w-full rounded-md"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    ></iframe>
+                            title={video.title}
+                            allowFullScreen
+                            className="aspect-video w-full rounded-md"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        ></iframe>
+                    </FadeIn>
                 ))}
             </div>
-            <h3 className="text-shine-purple text-4xl font-bold text-center lg:text-left mt-4">RELEVANT INFORMATION</h3>
+            <FadeIn>
+                <h3 className="text-shine-purple text-4xl font-bold text-center lg:text-left mt-4">RELEVANT INFORMATION</h3>
+            </FadeIn>
             <List list={relevantInformation} />
         </>
     )
