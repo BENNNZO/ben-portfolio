@@ -171,16 +171,16 @@ export default function TalentCoding() {
             </FadeIn>
             <div className="flex flex-row gap-2 mt-4 flex-wrap">
                 <FadeIn>
-                    <p className="bg-zinc-800/00 border z-10 border-purple-500/20 text-purple-300 backdrop-blur rounded-full px-3 py-1">Real Time F1 Telemetry and Data</p>
+                    <p className="bg-zinc-800/10 border border-purple-500/30 text-purple-300 backdrop-blur rounded-full px-3 py-1">Real Time F1 Telemetry and Data</p>
                 </FadeIn>
                 <FadeIn delay={0.1}>
-                    <p className="bg-zinc-800/00 border z-10 border-purple-500/20 text-purple-300 backdrop-blur rounded-full px-3 py-1">Custom WebSocket Server</p>
+                    <p className="bg-zinc-800/10 border border-purple-500/30 text-purple-300 backdrop-blur rounded-full px-3 py-1">Custom WebSocket Server</p>
                 </FadeIn>
                 <FadeIn delay={0.2}>
-                    <p className="bg-zinc-800/00 border z-10 border-purple-500/20 text-purple-300 backdrop-blur rounded-full px-3 py-1">NextJS Frontend</p>
+                    <p className="bg-zinc-800/10 border border-purple-500/30 text-purple-300 backdrop-blur rounded-full px-3 py-1">NextJS Frontend</p>
                 </FadeIn>
                 <FadeIn delay={0.3}>
-                    <p className="bg-zinc-800/00 border z-10 border-purple-500/20 text-purple-300 backdrop-blur rounded-full px-3 py-1">Tailwind Styling</p>
+                    <p className="bg-zinc-800/10 border border-purple-500/30 text-purple-300 backdrop-blur rounded-full px-3 py-1">Tailwind Styling</p>
                 </FadeIn>
             </div>
             <div className="relative rounded-lg mt-2">
@@ -200,7 +200,7 @@ export default function TalentCoding() {
                 <div className="absolute top-4 left-4 flex flex-col gap-2 items-start">
                     <FadeIn delay={0.5}>
                         <a className="bg-zinc-900/70 border z-10 border-purple-300/70 backdrop-blur-sm rounded-full px-3 py-1 flex flex-row gap-1 items-center relative group" href="https://live-f1.com" target="_blank">
-                            <p className="text-purple-200 duration-200 tracking-wide font-medium ease-out relative">
+                            <p className="text-purple-300 duration-200 tracking-wide font-medium ease-out relative">
                                 https://live-f1.com
                                 <span className="absolute bottom-1 left-0 w-0 h-px bg-purple-300 group-hover:w-full duration-200 ease-out"></span>
                             </p>
@@ -209,7 +209,7 @@ export default function TalentCoding() {
                     </FadeIn>
                     <FadeIn delay={0.7}>
                         <a className="bg-zinc-900/70 border z-10 border-purple-300/70 backdrop-blur-sm rounded-full px-3 py-1 flex flex-row gap-1 items-center relative group" href="/live-f1-information">
-                            <p className="text-purple-200 duration-200 tracking-wide font-medium ease-out relative">More Info</p>
+                            <p className="text-purple-300 duration-200 tracking-wide font-medium ease-out relative">More Info</p>
                             <Image src="/svg/open.svg" width={20} height={20} alt="open link" className="invert aspect-square h-full group-hover:rotate-45 group-hover:ml-2 duration-200 ease-out" />
                         </a>
                     </FadeIn>
