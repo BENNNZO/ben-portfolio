@@ -4,6 +4,7 @@ import { useState } from "react"
 
 import AudioPlayer from "./AudioPlayer"
 import List from "./List"
+import FadeIn from "./FadeIn"
 
 export default function TalentMusic() {
     const [playing, setPlaying] = useState()
@@ -35,39 +36,50 @@ export default function TalentMusic() {
     ]
 
     const music = [
-        { title: "Manuela",     src: "https://ben-portfolio-green.vercel.app/mp3/Manuela.mp3" },
-        { title: "M.i.a",       src: "https://ben-portfolio-green.vercel.app/mp3/M.i.a.mp3" },
-        { title: "I DONT",      src: "https://ben-portfolio-green.vercel.app/mp3/I DONT.mp3" },
-        { title: "Same",        src: "https://ben-portfolio-green.vercel.app/mp3/Same.mp3" },
-        { title: "Selfish",     src: "https://ben-portfolio-green.vercel.app/mp3/Selfish.mp3" },
-        { title: "Confusing",   src: "https://ben-portfolio-green.vercel.app/mp3/Confusing.mp3" },
+        { title: "Manuela", src: "https://ben-portfolio-green.vercel.app/mp3/Manuela.mp3" },
+        { title: "M.i.a", src: "https://ben-portfolio-green.vercel.app/mp3/M.i.a.mp3" },
+        { title: "I DONT", src: "https://ben-portfolio-green.vercel.app/mp3/I DONT.mp3" },
+        { title: "Same", src: "https://ben-portfolio-green.vercel.app/mp3/Same.mp3" },
+        { title: "Selfish", src: "https://ben-portfolio-green.vercel.app/mp3/Selfish.mp3" },
+        { title: "Confusing", src: "https://ben-portfolio-green.vercel.app/mp3/Confusing.mp3" },
         { title: "Another Day", src: "https://ben-portfolio-green.vercel.app/mp3/Another Day.mp3" }
     ]
 
     return (
         <>
-            <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left">TOP TRACKS</h3>
+            <FadeIn>
+                <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left">TOP TRACKS</h3>
+            </FadeIn>
             <div className="flex flex-col flex-wrap gap-4 mt-4">
                 {music.map((song, index) => (
-                    <AudioPlayer key={index} title={song.title} playing={playing} setPlaying={setPlaying} src={song.src}/>
+                    <FadeIn key={index} delay={0.1 * index}>
+                        <AudioPlayer title={song.title} playing={playing} setPlaying={setPlaying} src={song.src} />
+                    </FadeIn>
                 ))}
             </div>
 
-            <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center mt-12 lg:text-left">SKILLS</h3>
-            <ul className={"md:flex md:flex-row sm:grid sm:grid-cols-2 flex flex-col justify-between gap-12 mt-4"}>
+            <FadeIn>
+                <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center mt-12 lg:text-left">SKILLS</h3>
+
+            </FadeIn>
+            <ul className={"grid sm:grid-cols-2 md:grid-cols-4 grid-cols-1 justify-between gap-12 mt-4"}>
                 {skillsList.map((item, index) => (
-                    <li key={index} className="bg-purple-950/20 border border-purple-950/50 backdrop-blur-sm w-full rounded-md py-8">
-                        <div className="flex flex-col gap-2 items-center">
-                            <p className="text-4xl font-bold text-shine-purple">{item.length}</p>
-                            <p className="font-bold">Years</p>
-                        </div>
-                        <div className="w-3/4 mx-auto h-px bg-purple-950/50 my-4"></div>
-                        <p className="text-center text-xl font-bold tracking-wider">{item.skill}</p>
-                    </li>
+                    <FadeIn key={index} delay={0.1 * index}>
+                        <li className="bg-purple-950/20 border border-purple-950/50 backdrop-blur-sm rounded-md py-8">
+                            <div className="flex flex-col gap-2 items-center">
+                                <p className="text-4xl font-bold text-shine-purple">{item.length}</p>
+                                <p className="font-bold">Years</p>
+                            </div>
+                            <div className="w-3/4 mx-auto h-px bg-purple-950/50 my-4"></div>
+                            <p className="text-center text-xl font-bold tracking-wider">{item.skill}</p>
+                        </li>
+                    </FadeIn>
                 ))}
             </ul>
 
-            <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center mt-12 lg:text-left">PRODUCTION</h3>
+            <FadeIn>
+                <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center mt-12 lg:text-left">PRODUCTION</h3>
+            </FadeIn>
             <List list={productionList} />
         </>
     )
