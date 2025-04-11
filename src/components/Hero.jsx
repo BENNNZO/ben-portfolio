@@ -17,8 +17,8 @@ export default function Hero() {
                 </FadeIn>
                 <FadeIn delay={0.1}>
                     <div className="flex gap-2">
-                        <a href="/pdf/Resume.pdf" download="Resume" target="_blank" className="px-4 py-2 bg-black/10 hover:shadow-md hover:bg-black/0 duration-150 ease-out backdrop-blur-sm border border-purple-400/20 rounded-full cursor-pointer">Download Resume</a>
-                        <a href="https://github.com/bennnzo" target="_blank" className="p-2 bg-black/10 hover:shadow-md hover:bg-black/0 duration-150 ease-out backdrop-blur-sm border border-purple-400/20 rounded-full cursor-pointer">
+                        <a href="/pdf/Resume.pdf" download="Resume" target="_blank" className="px-4 py-2 bg-black/30 hover:shadow-md hover:bg-black/0 hover:bottom-0.5 bottom-0 relative duration-150 ease-out backdrop-blur-sm border border-purple-400/20 rounded-full cursor-pointer">Download Resume</a>
+                        <a href="https://github.com/bennnzo" target="_blank" className="p-2 b bg-black/30 hover:shadow-md hover:bg-black/0 hover:bottom-0.5 bottom-0 relative duration-150 ease-out backdrop-blur-sm border border-purple-400/20 rounded-full cursor-pointer">
                             <Image src="/img/socials/github.svg" width={25} height={25} className="invert h-full aspect-square" alt="github icon" />
                         </a>
                     </div>
