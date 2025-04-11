@@ -185,7 +185,7 @@ export default function TalentCoding() {
                 {projects.map((project, index) => (
                     <FadeIn key={index} delay={0.1 * (index % 2)}>
                         <div className="aspect-[3/2] relative rounded-md group lg:scale-95 lg:hover:scale-100 duration-200 ease-out">
-                            <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out blur-xl group-hover:blur-2xl opacity-30 group-hover:opacity-50" />
+                            <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out blur-xl group-hover:blur-2xl opacity-50 group-hover:opacity-70" />
                             <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out opacity-100" />
                             <Image onClick={() => setInfo(project.title)} src="/svg/info2.svg" width={35} height={35} alt="more info" className="absolute top-4 right-4 mix-blend-difference invert rounded-full group-hover:opacity-100 lg:opacity-0 opacity-100 duration-200 ease-out cursor-pointer hover:scale-110" />
 
