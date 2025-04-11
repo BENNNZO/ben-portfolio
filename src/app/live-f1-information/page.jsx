@@ -9,6 +9,8 @@ import Image from "next/image";
 
 import { JetBrains_Mono } from "next/font/google";
 
+import FadeIn from "@/components/FadeIn";
+
 const jetBrainsMono = JetBrains_Mono({
     weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
     subsets: ["latin"]
@@ -98,10 +100,12 @@ export default function Home() {
                 <Particles options={options} />
                 <div className="">
                     {/* BACK BUTTON */}
-                    <button onClick={() => router.push("/")} className="fixed top-4 left-4 hover:pl-8 duration-200 ease-out bg-zinc-900/50 text-yellow-300 border z-20 border-yellow-400/50 backdrop-blur-sm rounded-full px-3 py-1 group">
-                        Back Home
-                        <Image src="/svg/open.svg" width={20} height={20} alt="open link" className="absolute -rotate-90 opacity-0 group-hover:opacity-100 duration-200 ease-out top-1/2 -translate-y-1/2 left-2 invert rounded-full aspect-square h-full" />
-                    </button>
+                    <FadeIn>
+                        <button onClick={() => router.push("/")} className="fixed top-4 left-4 hover:pl-8 duration-200 ease-out bg-zinc-900/50 text-yellow-300 border z-20 border-yellow-400/50 backdrop-blur-sm rounded-full px-3 py-1 group">
+                            Back Home
+                            <Image src="/svg/open.svg" width={20} height={20} alt="open link" className="absolute -rotate-90 opacity-0 group-hover:opacity-100 duration-200 ease-out top-1/2 -translate-y-1/2 left-2 invert rounded-full aspect-square h-full" />
+                        </button>
+                    </FadeIn>
 
                     {/* HERO */}
                     <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-52 relative">
@@ -116,48 +120,62 @@ export default function Home() {
                     <section className="max-w-4xl py-8 mx-auto flex flex-col gap-4 px-4">
                         <Container>
                             <div className="flex flex-col gap-2">
-                                <h2 className="text-2xl font-bold">Links</h2>
+                                <FadeIn>
+                                    <h2 className="text-2xl font-bold">Links</h2>
+                                </FadeIn>
                                 <div className="flex flex-row gap-2 flex-wrap">
-                                    <Link link="https://github.com/BENNNZO/f1-dashboard" text="Github (Source Code)" />
-                                    <Link link="https://live-f1.com" text="https://live-f1.com" />
+                                    <FadeIn delay={0.1}>
+                                        <Link link="https://github.com/BENNNZO/f1-dashboard" text="Github (Source Code)" />
+                                    </FadeIn>
+                                    <FadeIn delay={0.2}>
+                                        <Link link="https://live-f1.com" text="https://live-f1.com" />
+                                    </FadeIn>
                                 </div>
                             </div>
                         </Container>
                         <Container>
                             <div className="flex flex-col gap-2">
-                                <h2 className="text-2xl font-bold">Technologies Used</h2>
+                                <FadeIn>
+                                    <h2 className="text-2xl font-bold">Technologies Used</h2>
+                                </FadeIn>
                                 <div className="flex flex-row gap-2 flex-wrap">
-                                    <Tech text="HTML" />
-                                    <Tech text="CSS" />
-                                    <Tech text="JS" />
-                                    <Tech text="React" />
-                                    <Tech text="NodeJS" />
-                                    <Tech text="NextJS" />
-                                    <Tech text="Tailwind" />
-                                    <Tech text="Zustand" />
-                                    <Tech text="Web Sockets" />
+                                    {["HTML", "CSS", "JS", "React", "NodeJS", "NextJS", "Tailwind", "Zustand", "Web Sockets"].map((text, index) => (
+                                        <FadeIn key={index} delay={(0.1 * index) + 0.1}>
+                                            <Tech text={text} />
+                                        </FadeIn>
+                                    ))}
                                 </div>
                             </div>
                         </Container>
                         <Container>
                             <div className="flex flex-col gap-2">
-                                <h2 className="text-2xl font-bold">Features</h2>
+                                <FadeIn>
+                                    <h2 className="text-2xl font-bold">Features</h2>
+                                </FadeIn>
                                 <div className="flex flex-row gap-2 flex-wrap">
-                                    <Tech text="Custom Websocket Server" />
-                                    <Tech text="Live F1 Telemetry and Data" />
-                                    <Tech text="Skeleton Loading System" />
-                                    <Tech text="Responsive Design" />
-                                    <Tech text="Custom Development Tool: Race Simulator" />
+                                    {["Custom Websocket Server", "Live F1 Telemetry and Data", "Skeleton Loading System", "Responsive Design", "Custom Development Tool: Race Simulator"].map((text, index) => (
+                                        <FadeIn key={index} delay={(0.1 * index) + 0.1}>
+                                            <Tech text={text} />
+                                        </FadeIn>
+                                    ))}
                                 </div>
                             </div>
                         </Container>
                         <Container>
-                            <h2 className="text-2xl font-bold">What Is live-f1.com?</h2>
-                            <p>This is a real-time formula 1 telemetry and data dashboard. Within the dashboard you will find <Strong text="track positions" />, <Strong text="lap times" />, <Strong text="sector times" />, <Strong text="intervals" />, <Strong text="weather" />, <Strong text="race control messages" />, and even <Strong text="live team radios" />. There is also a real-time circuit with drivers that move on the track in real-time!</p>
+                            <FadeIn>
+                                <h2 className="text-2xl font-bold">What Is live-f1.com?</h2>
+                            </FadeIn>
+                            <FadeIn delay={0.1}>
+                                <p>This is a real-time formula 1 telemetry and data dashboard. Within the dashboard you will find <Strong text="track positions" />, <Strong text="lap times" />, <Strong text="sector times" />, <Strong text="intervals" />, <Strong text="weather" />, <Strong text="race control messages" />, and even <Strong text="live team radios" />. There is also a real-time circuit with drivers that move on the track in real-time!</p>
+                            </FadeIn>
                         </Container>
                         <Container>
-                            <h2 className="text-2xl font-bold">How Was It Built?</h2>
-                            <p>I built this project from scratch starting with just `npx create-next-app@latest`. The main technologies I used are: <Strong text="NodeJS" />, <Strong text="NextJS" />, <Strong text="Tailwind" />, <Strong text="Zustand" />, and <Strong text="Websockets" />. I had to build a custom websocket server so that I could push the f1 data to the client as the f1 websocket does not allow client side connections.</p>
+                            <FadeIn>
+                                <h2 className="text-2xl font-bold">How Was It Built?</h2>
+                            </FadeIn>
+                            <FadeIn delay={0.1}>
+                                <p>I built this project from scratch starting with just `npx create-next-app@latest`. The main technologies I used are: <Strong text="NodeJS" />, <Strong text="NextJS" />, <Strong text="Tailwind" />, <Strong text="Zustand" />, and <Strong text="Websockets" />. I had to build a custom websocket server so that I could push the f1 data to the client as the f1 websocket does not allow client side connections.</p>
+                            </FadeIn>
                         </Container>
                     </section>
                 </div>
@@ -183,5 +201,5 @@ function Container({ children }) {
         <div className="flex flex-col gap-2 border border-white/20 rounded-2xl px-4 py-3 bg-zinc-950/30">
             {children}
         </div>
-    ) 
+    )
 }
