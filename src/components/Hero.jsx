@@ -16,7 +16,12 @@ export default function Hero() {
                     <p className="font-bold md:text-6xl text-4xl">HEY, I'M <span className="text-shine-purple">BEN</span>!</p>
                 </FadeIn>
                 <FadeIn delay={0.1}>
-                    <a href="/pdf/Resume.pdf" download="Resume" target="_blank" className="px-4 py-2 bg-black/10 hover:shadow-md hover:bg-black/0 duration-150 ease-out backdrop-blur-sm border border-purple-400/20 rounded-md cursor-pointer">Download Resume</a>
+                    <div className="flex gap-2">
+                        <a href="/pdf/Resume.pdf" download="Resume" target="_blank" className="px-4 py-2 bg-black/10 hover:shadow-md hover:bg-black/0 duration-150 ease-out backdrop-blur-sm border border-purple-400/20 rounded-full cursor-pointer">Download Resume</a>
+                        <a href="https://github.com/bennnzo" target="_blank" className="p-2 bg-black/10 hover:shadow-md hover:bg-black/0 duration-150 ease-out backdrop-blur-sm border border-purple-400/20 rounded-full cursor-pointer">
+                            <Image src="/img/socials/github.svg" width={25} height={25} className="invert h-full aspect-square" alt="github icon" />
+                        </a>
+                    </div>
                 </FadeIn>
                 <div className="w-24 h-8 bg-purple-400 blur-xl absolute top-3 right-8 md:opacity-50 opacity-0"></div>
             </div>
