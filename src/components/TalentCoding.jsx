@@ -159,18 +159,18 @@ export default function TalentCoding() {
                     <Image src="/img/Projects/live-f1.png" width={1022} height={528} alt="live-f1 project image" placeholder="blur" quality={100} blurDataURL="/img/projects/live-f1-blur.jpg" className="rounded-lg absolute top-px left-px w-[calc(100%-2px)] h-[calc(100%-2px)]" />
                 </FadeIn>
                 <div className="absolute top-4 right-4 flex flex-col gap-2 items-end">
-                    <FadeIn delay={0.1}>
+                    <FadeIn delay={0.5}>
                         <a className="bg-zinc-900/70 border z-10 border-purple-400/50 backdrop-blur rounded-full px-3 py-1 flex flex-row gap-2 items-center relative group" href="https://live-f1.com" target="_blank">
-                            <p className="group-hover:mr-5 text-purple-300 duration-200 ease-out relative">
+                            <p className="group-hover:mr-5 text-purple-300 duration-200 tracking-wide font-medium ease-out relative">
                                 https://live-f1.com
                                 <span className="absolute bottom-1 left-0 w-0 h-px bg-purple-300 group-hover:w-full duration-200 ease-out"></span>
                             </p>
                             <Image src="/svg/open.svg" width={20} height={20} alt="open link" className="absolute opacity-0 group-hover:opacity-100 duration-200 ease-out top-1/2 -translate-y-1/2 right-2 invert rounded-full aspect-square h-full" />
                         </a>
                     </FadeIn>
-                    <FadeIn delay={0.2}>
+                    <FadeIn delay={0.7}>
                         <a className="bg-zinc-900/70 border z-10 border-purple-400/50 backdrop-blur rounded-full px-3 py-1 flex flex-row gap-2 items-center relative group" href="/live-f1-information">
-                            <p className="group-hover:mr-5 text-purple-300 duration-200 ease-out relative">More Info</p>
+                            <p className="group-hover:mr-5 text-purple-300 duration-200 tracking-wide font-medium ease-out relative">More Info</p>
                             <Image src="/svg/open.svg" width={20} height={20} alt="open link" className="absolute opacity-0 group-hover:opacity-100 duration-200 ease-out top-1/2 -translate-y-1/2 right-2 invert rounded-full aspect-square h-full" />
                         </a>
                     </FadeIn>
@@ -205,7 +205,7 @@ export default function TalentCoding() {
                 {/* PROJECT INFO MODALS DESKTOP */}
                 <div className="absolute hidden md:block top-0 left-0 w-full h-full pointer-events-none">
                     {projects.map((project, index) => (
-                        <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 pt-2 pb-4 bg-black/80 border border-white/20 backdrop-blur-lg w-full max-w-3xl rounded-xl shadow-lg ${info === project.title ? "opacity-100 pointer-events-auto scale-100" : "opacity-0 pointer-events-none scale-90"} duration-300 ease-out`}>
+                        <div key={index} className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 pt-2 pb-4 bg-black/80 border border-white/20 backdrop-blur-lg w-full max-w-3xl rounded-xl shadow-lg ${info === project.title ? "opacity-100 pointer-events-auto scale-100" : "opacity-0 pointer-events-none scale-90"} duration-300 ease-out`}>
                             <div className="flex flex-row justify-between items-center mb-4 mt-2">
                                 <p className={`text-4xl font-bold text-center uppercase text-shine-purple`}>{project.title}</p>
                                 <Image src="/svg/close.svg" width={30} height={30} alt="close modal" className="rounded-full invert cursor-pointer" onClick={() => setInfo(null)} />
