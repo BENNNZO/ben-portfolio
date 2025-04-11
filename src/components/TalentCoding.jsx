@@ -21,7 +21,21 @@ export default function TalentCoding() {
             description: "Developed a professional website for a family-owned business, featuring a seamless contact form and a secure payment page powered by Stripe. This project highlights my ability to create functional and visually appealing business solutions.",
             source: "/img/Projects/riveroak.png",
             alt: "River Oak Website",
-            link: "https://example.com/river-oak"
+            link: "https://example.com/river-oak",
+            techs: [
+                {
+                    title: "Stripe",
+                    color: "635BFF"
+                },
+                {
+                    title: "Lease Form",
+                    color: "3db1ff"
+                },
+                {
+                    title: "Email Form",
+                    color: "3db1ff"
+                }
+            ]
         },
         // {
         //     title: "Barber Shop",
@@ -35,7 +49,18 @@ export default function TalentCoding() {
             description: "Created a dynamic platform for developers to share code snippets, complete with user authentication via NextAuth and a robust MongoDB database. This project demonstrates my expertise in full-stack development and user-centric design.",
             source: "/img/Projects/snippity.png",
             alt: "Snippity Website",
-            link: "https://example.com/snippity"
+            link: "https://example.com/snippity",
+            techs: [
+                {
+                    title: "MongoDB",
+                    color: "2edb94"
+                },
+                {
+                    title: "Next Auth",
+                    color: "33E6BE",
+                    otherColors: ["CC42E7", "21AAF4"]
+                }
+            ]
         },
         // {
         //     title: "Dashboard",
@@ -49,14 +74,25 @@ export default function TalentCoding() {
             description: "Developed a data-driven habit tracker to monitor daily activities, sleep patterns, and mood. This project reflects my passion for analytics and creating tools that promote self-improvement.",
             source: "/img/Projects/tracker.png",
             alt: "Tracker Website",
-            link: "https://example.com/tracker"
+            link: "https://example.com/tracker",
+            techs: [
+                {
+                    title: "MongoDB",
+                    color: "2edb94"
+                },
+                {
+                    title: "Next UI",
+                    color: "3db1ff"
+                }
+            ]
         },
         {
             title: "Detailing",
             description: "Designed a sleek website for my detailing business, featuring a gallery, contact form, and quick estimate tool. This project highlights my ability to create user-friendly interfaces for service-based businesses.",
             source: "/img/Projects/detailing.png",
             alt: "Idle Website",
-            link: "https://example.com/idle"
+            link: "https://example.com/idle",
+            techs: []
         }
     ]
 
@@ -147,7 +183,7 @@ export default function TalentCoding() {
                     <p className="bg-zinc-800/00 border z-10 border-purple-500/20 text-purple-300 backdrop-blur rounded-full px-3 py-1">Tailwind Styling</p>
                 </FadeIn>
             </div>
-            <div className="relative rounded-lg duration-200 ease-out mt-2">
+            <div className="relative rounded-lg mt-2">
                 <FadeIn>
                     <Image src="/img/Projects/live-f1.png" width={1022} height={528} alt="live-f1 project image" quality={0} className="rounded-lg" />
                     <div className="absolute top-0 left-0 w-full h-full rounded-lg overflow-hidden blur-3xl">
@@ -158,10 +194,10 @@ export default function TalentCoding() {
                     </div>
                     <Image src="/img/Projects/live-f1.png" width={1022} height={528} alt="live-f1 project image" placeholder="blur" quality={100} blurDataURL="/img/projects/live-f1-blur.jpg" className="rounded-lg absolute top-px left-px w-[calc(100%-2px)] h-[calc(100%-2px)]" />
                 </FadeIn>
-                <div className="absolute top-4 right-4 flex flex-col gap-2 items-end">
+                <div className="absolute top-4 left-4 flex flex-col gap-2 items-start">
                     <FadeIn delay={0.5}>
-                        <a className="bg-zinc-900/70 border z-10 border-purple-300/40 backdrop-blur-sm rounded-full px-3 py-1 flex flex-row gap-2 items-center relative group" href="https://live-f1.com" target="_blank">
-                            <p className="group-hover:mr-5 text-purple-200 duration-200 tracking-wide font-medium ease-out relative">
+                        <a className="bg-zinc-900/70 border z-10 border-purple-300/70 backdrop-blur-sm rounded-full px-3 py-1 flex flex-row gap-2 items-center relative group" href="https://live-f1.com" target="_blank">
+                            <p className="group-hover:mr-5 text-purple-200 duration-200 tracking-wide font-medium ease-out relative underline">
                                 https://live-f1.com
                                 <span className="absolute bottom-1 left-0 w-0 h-px bg-purple-300 group-hover:w-full duration-200 ease-out"></span>
                             </p>
@@ -169,7 +205,7 @@ export default function TalentCoding() {
                         </a>
                     </FadeIn>
                     <FadeIn delay={0.7}>
-                        <a className="bg-zinc-900/70 border z-10 border-purple-300/40 backdrop-blur-sm rounded-full px-3 py-1 flex flex-row gap-2 items-center relative group" href="/live-f1-information">
+                        <a className="bg-zinc-900/70 border z-10 border-purple-300/70 backdrop-blur-sm rounded-full px-3 py-1 flex flex-row gap-2 items-center relative group" href="/live-f1-information">
                             <p className="group-hover:mr-5 text-purple-200 duration-200 tracking-wide font-medium ease-out relative">More Info</p>
                             <Image src="/svg/open.svg" width={20} height={20} alt="open link" className="absolute opacity-0 group-hover:opacity-100 duration-200 ease-out top-1/2 -translate-y-1/2 right-2 invert rounded-full aspect-square h-full" />
                         </a>
@@ -189,6 +225,7 @@ export default function TalentCoding() {
                             <Image alt={project.alt} src={project.source} width={1920} height={1080} className="h-full w-full object-top object-cover rounded-md absolute duration-500 ease-out opacity-100" />
                             <Image onClick={() => setInfo(project.title)} src="/svg/info2.svg" width={35} height={35} alt="more info" className="absolute top-4 right-4 mix-blend-difference invert rounded-full group-hover:opacity-100 lg:opacity-0 opacity-100 duration-200 ease-out cursor-pointer hover:scale-110" />
 
+
                             {/* PROJECT INFO MODALS MOBILE */}
                             <div className={`absolute md:hidden flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 pt-2 pb-4 bg-black/80 border border-white/20 backdrop-blur-lg w-full h-full rounded-md shadow-lg ${info === project.title ? "opacity-100 pointer-events-auto scale-100" : "opacity-0 pointer-events-none scale-90"} duration-300 ease-out`}>
                                 <div className="flex flex-row justify-between items-center mb-4 mt-2">
@@ -205,12 +242,21 @@ export default function TalentCoding() {
                 {/* PROJECT INFO MODALS DESKTOP */}
                 <div className="absolute hidden md:block top-0 left-0 w-full h-full pointer-events-none">
                     {projects.map((project, index) => (
-                        <div key={index} className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 pt-2 pb-4 bg-black/80 border border-white/20 backdrop-blur-lg w-full max-w-3xl rounded-xl shadow-lg ${info === project.title ? "opacity-100 pointer-events-auto scale-100" : "opacity-0 pointer-events-none scale-90"} duration-300 ease-out`}>
-                            <div className="flex flex-row justify-between items-center mb-4 mt-2">
+                        <div key={index} className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 pt-1 pb-2 bg-black/80 border border-white/20 backdrop-blur-lg w-full max-w-3xl rounded-xl shadow-lg ${info === project.title ? "opacity-100 pointer-events-auto scale-100" : "opacity-0 pointer-events-none scale-90"} duration-300 ease-out`}>
+                            <div className="flex flex-row justify-between items-center mb-2 mt-2">
                                 <p className={`text-4xl font-bold text-center uppercase text-shine-purple`}>{project.title}</p>
                                 <Image src="/svg/close.svg" width={30} height={30} alt="close modal" className="rounded-full invert cursor-pointer" onClick={() => setInfo(null)} />
                             </div>
-                            <Image alt={project.alt} src={project.source} width={1920} height={1080} className="w-full aspect-[16/9] object-cover object-top rounded-md" />
+                            <div className="relative">
+                                <Image alt={project.alt} src={project.source} width={1920} height={1080} className="w-full aspect-[16/9] object-cover object-top rounded-md" />
+                                <div className="absolute bottom-2 left-2 flex flex-row gap-2">
+                                    {project.techs.map((tech, index) => (
+                                        <p key={index} className={`px-2 py-0.5 rounded-full font-medium text-sm backdrop-blur-sm shadow-md`} style={{ background: `#${tech.title === "Next Auth" ? tech.otherColors[0] : tech.color}` }}>
+                                            {tech.title}
+                                        </p>
+                                    ))}
+                                </div>
+                            </div>
                             <p className="mt-6 mb-2">{project.description}</p>
                         </div>
                     ))}
