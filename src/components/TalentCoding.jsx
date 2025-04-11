@@ -18,42 +18,42 @@ export default function TalentCoding() {
     const projects = [
         {
             title: "River Oak",
-            description: "A website I built for my dad complete with a contact forum and payment page backed with Stripe.",
+            description: "Developed a professional website for a family-owned business, featuring a seamless contact form and a secure payment page powered by Stripe. This project highlights my ability to create functional and visually appealing business solutions.",
             source: "/img/Projects/riveroak.png",
             alt: "River Oak Website",
             link: "https://example.com/river-oak"
         },
-        {
-            title: "Barber Shop",
-            description: "A website I built for a local business in the area. Sadly they do not use it anymore, but it still displays my design skills.",
-            source: "/img/Projects/barbering.png",
-            alt: "Barber Shop Website",
-            link: "https://example.com/barber-shop"
-        },
+        // {
+        //     title: "Barber Shop",
+        //     description: "Designed and built a modern website for a local business, showcasing my creative design skills. Although no longer in use, it remains a testament to my ability to deliver tailored solutions for small businesses.",
+        //     source: "/img/Projects/barbering.png",
+        //     alt: "Barber Shop Website",
+        //     link: "https://example.com/barber-shop"
+        // },
         {
             title: "Snippity",
-            description: "A website I made a while ago that has full user authentication with NextAuth and a mongoDB database. It was a site where people could share there code snippets.",
+            description: "Created a dynamic platform for developers to share code snippets, complete with user authentication via NextAuth and a robust MongoDB database. This project demonstrates my expertise in full-stack development and user-centric design.",
             source: "/img/Projects/snippity.png",
             alt: "Snippity Website",
             link: "https://example.com/snippity"
         },
-        {
-            title: "Dashboard",
-            description: "This is a website I personally use everyday. It has links to all of my current online classes, background music, quick links, and a todo list that I use to keep track of my daily tasks.",
-            source: "/img/Projects/dashboard.png",
-            alt: "Dashboard Website",
-            link: "https://example.com/dashboard"
-        },
+        // {
+        //     title: "Dashboard",
+        //     description: "Built a personalized productivity dashboard featuring quick links, background music, and a to-do list. This project showcases my ability to create practical tools that enhance daily workflows.",
+        //     source: "/img/Projects/dashboard.png",
+        //     alt: "Dashboard Website",
+        //     link: "https://example.com/dashboard"
+        // },
         {
             title: "Tracker",
-            description: "This is another website I personally use everyday. I built this website cause I love tracking data and looking at statistics. So this website helps me keep track of my daily habits, sleep time, mood, and more.",
+            description: "Developed a data-driven habit tracker to monitor daily activities, sleep patterns, and mood. This project reflects my passion for analytics and creating tools that promote self-improvement.",
             source: "/img/Projects/tracker.png",
             alt: "Tracker Website",
             link: "https://example.com/tracker"
         },
         {
             title: "Detailing",
-            description: "I used to run a small detailing business on the side and this is the website I built for it. It has a contact form and a gallery of all the cars I have detailed. Plus a quick estimate form",
+            description: "Designed a sleek website for my detailing business, featuring a gallery, contact form, and quick estimate tool. This project highlights my ability to create user-friendly interfaces for service-based businesses.",
             source: "/img/Projects/detailing.png",
             alt: "Idle Website",
             link: "https://example.com/idle"
@@ -160,8 +160,8 @@ export default function TalentCoding() {
                 </FadeIn>
                 <div className="absolute top-4 right-4 flex flex-col gap-2 items-end">
                     <FadeIn delay={0.5}>
-                        <a className="bg-zinc-900/70 border z-10 border-purple-400/50 backdrop-blur rounded-full px-3 py-1 flex flex-row gap-2 items-center relative group" href="https://live-f1.com" target="_blank">
-                            <p className="group-hover:mr-5 text-purple-300 duration-200 tracking-wide font-medium ease-out relative">
+                        <a className="bg-zinc-900/70 border z-10 border-purple-300/40 backdrop-blur-sm rounded-full px-3 py-1 flex flex-row gap-2 items-center relative group" href="https://live-f1.com" target="_blank">
+                            <p className="group-hover:mr-5 text-purple-200 duration-200 tracking-wide font-medium ease-out relative">
                                 https://live-f1.com
                                 <span className="absolute bottom-1 left-0 w-0 h-px bg-purple-300 group-hover:w-full duration-200 ease-out"></span>
                             </p>
@@ -169,8 +169,8 @@ export default function TalentCoding() {
                         </a>
                     </FadeIn>
                     <FadeIn delay={0.7}>
-                        <a className="bg-zinc-900/70 border z-10 border-purple-400/50 backdrop-blur rounded-full px-3 py-1 flex flex-row gap-2 items-center relative group" href="/live-f1-information">
-                            <p className="group-hover:mr-5 text-purple-300 duration-200 tracking-wide font-medium ease-out relative">More Info</p>
+                        <a className="bg-zinc-900/70 border z-10 border-purple-300/40 backdrop-blur-sm rounded-full px-3 py-1 flex flex-row gap-2 items-center relative group" href="/live-f1-information">
+                            <p className="group-hover:mr-5 text-purple-200 duration-200 tracking-wide font-medium ease-out relative">More Info</p>
                             <Image src="/svg/open.svg" width={20} height={20} alt="open link" className="absolute opacity-0 group-hover:opacity-100 duration-200 ease-out top-1/2 -translate-y-1/2 right-2 invert rounded-full aspect-square h-full" />
                         </a>
                     </FadeIn>
@@ -181,7 +181,7 @@ export default function TalentCoding() {
             <FadeIn>
                 <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left mt-8">PROJECTS</h3>
             </FadeIn>
-            <div className="md:grid md:grid-cols-2 md:grid-rows-3 gap-2 my-4 flex flex-col relative">
+            <div className="md:grid md:grid-cols-2 md:grid-rows-2 gap-2 my-4 flex flex-col relative">
                 {projects.map((project, index) => (
                     <FadeIn key={index} delay={0.1 * (index % 2)}>
                         <div className="aspect-[3/2] relative rounded-md group lg:scale-95 lg:hover:scale-100 duration-200 ease-out">
