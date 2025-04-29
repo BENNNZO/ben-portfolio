@@ -70,7 +70,7 @@ export default function Home() {
                     value: 50,
                 },
                 opacity: {
-                    value: { min: 0.01, max: 0.1 },
+                    value: { min: 0.05, max: 0.15 },
                 },
                 shape: {
                     type: "circle",
