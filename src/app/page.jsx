@@ -6,7 +6,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 
 import Hero from "@/components/Hero"
 import Education from "@/components/Education";
-import Talents from "@/components/Talents";
+import Talents from "@/components/Talents/Talents";
 import Contacts from "@/components/Contacts";
 
 export default function Home() {

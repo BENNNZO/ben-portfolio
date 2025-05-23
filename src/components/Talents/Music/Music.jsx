@@ -1,12 +1,11 @@
 "use client"
 
 import { useState } from "react"
-
 import AudioPlayer from "./AudioPlayer"
-import List from "./List"
-import FadeIn from "./FadeIn"
+import List from "../../List"
+import FadeIn from "../../FadeIn"
 
-export default function TalentMusic() {
+export default function Music() {
     const [playing, setPlaying] = useState()
 
     const productionList = [
@@ -48,7 +47,7 @@ export default function TalentMusic() {
     return (
         <>
             <FadeIn>
-                <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center lg:text-left">TOP TRACKS</h3>
+                <h3 className="font-bold text-shine-purple text-4xl lg:text-left text-center whitespace-nowrap">TOP TRACKS</h3>
             </FadeIn>
             <div className="flex flex-col flex-wrap gap-4 mt-4">
                 {music.map((song, index) => (
@@ -59,26 +58,26 @@ export default function TalentMusic() {
             </div>
 
             <FadeIn>
-                <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center mt-12 lg:text-left">SKILLS</h3>
+                <h3 className="mt-12 font-bold text-shine-purple text-4xl lg:text-left text-center whitespace-nowrap">SKILLS</h3>
 
             </FadeIn>
             <ul className={"grid sm:grid-cols-2 md:grid-cols-4 grid-cols-1 justify-between gap-12 mt-4"}>
                 {skillsList.map((item, index) => (
                     <FadeIn key={index} delay={0.1 * index}>
-                        <li className="bg-purple-950/20 border border-purple-950/50 backdrop-blur-sm rounded-md py-8">
-                            <div className="flex flex-col gap-2 items-center">
-                                <p className="text-4xl font-bold text-shine-purple">{item.length}</p>
+                        <li className="bg-purple-950/20 backdrop-blur-sm py-8 border border-purple-950/50 rounded-md">
+                            <div className="flex flex-col items-center gap-2">
+                                <p className="font-bold text-shine-purple text-4xl">{item.length}</p>
                                 <p className="font-bold">Years</p>
                             </div>
-                            <div className="w-3/4 mx-auto h-px bg-purple-950/50 my-4"></div>
-                            <p className="text-center text-xl font-bold tracking-wider">{item.skill}</p>
+                            <div className="bg-purple-950/50 mx-auto my-4 w-3/4 h-px"></div>
+                            <p className="font-bold text-xl text-center tracking-wider">{item.skill}</p>
                         </li>
                     </FadeIn>
                 ))}
             </ul>
 
             <FadeIn>
-                <h3 className="text-shine-purple text-4xl font-bold whitespace-nowrap text-center mt-12 lg:text-left">PRODUCTION</h3>
+                <h3 className="mt-12 font-bold text-shine-purple text-4xl lg:text-left text-center whitespace-nowrap">PRODUCTION</h3>
             </FadeIn>
             <List list={productionList} />
         </>

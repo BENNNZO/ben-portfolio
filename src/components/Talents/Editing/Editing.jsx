@@ -1,8 +1,8 @@
 import Image from "next/image"
-import List from "./List"
-import FadeIn from "./FadeIn"
+import List from "../../List"
+import FadeIn from "../../FadeIn"
 
-export default function TalentEditing() {
+export default function Editing() {
     const relevantInformation = [
         "I edit mainly in Davinchi but I have also used Adobe Premier and Sony Vegas.",
         "I also used Blender and Affinity Designer to create many of my thumbnails and banners.",
@@ -39,9 +39,9 @@ export default function TalentEditing() {
     return (
         <>
             <FadeIn>
-                <Image src="/img/channel banner.jpg" alt="channel banner" className="rounded-md lg:h-52 md:h-44 h-36 object-cover mb-2" width={1024} height={500} />
+                <Image src="/img/channel banner.jpg" alt="channel banner" className="mb-2 rounded-md h-36 md:h-44 lg:h-52 object-cover" width={1024} height={500} />
             </FadeIn>
-            <div className="md:grid md:grid-cols-2 md:grid-rows-3 gap-2 mb-2 flex flex-col relative">
+            <div className="relative flex flex-col gap-2 md:grid md:grid-cols-2 md:grid-rows-3 mb-2">
                 {videos.map((video, index) => (
                     <FadeIn key={index} delay={0.1 * index}>
                         <iframe
@@ -49,14 +49,14 @@ export default function TalentEditing() {
 
                             title={video.title}
                             allowFullScreen
-                            className="aspect-video w-full rounded-md"
+                            className="rounded-md w-full aspect-video"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         ></iframe>
                     </FadeIn>
                 ))}
             </div>
             <FadeIn>
-                <h3 className="text-shine-purple text-4xl font-bold text-center lg:text-left mt-4">RELEVANT INFORMATION</h3>
+                <h3 className="mt-4 font-bold text-shine-purple text-4xl lg:text-left text-center">RELEVANT INFORMATION</h3>
             </FadeIn>
             <List list={relevantInformation} />
         </>
