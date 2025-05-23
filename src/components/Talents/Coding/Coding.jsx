@@ -6,7 +6,18 @@ export default function Coding() {
     return (
         <>
             <Skills />
-            <ShowcaseProject />
+            <ShowcaseProject
+                name={"LIVE F1"}
+                techPoints={[
+                    "Real Time F1 Telemetry and Data",
+                    "Custom WebSocket Server",
+                    "NextJS Frontend",
+                    "Tailwind Styling"
+                ]}
+                imgSrc={"/img/Projects/live-f1.png"}
+                link={"https://live-f1.com"}
+                infoLink={"/live-f1-information"}
+            />
             <RelevantInformation />
         </>
     )
