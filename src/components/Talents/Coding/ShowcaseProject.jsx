@@ -1,7 +1,7 @@
 import FadeIn from "@/components/FadeIn"
 import Image from "next/image"
 
-export default function ShowcaseProject({ name, techPoints, vidSrc, imgSrc, link, infoLink }) {
+export default function Project({ name, techPoints, vidSrc, imgSrc, link, infoLink }) {
     return (
         <>
             <FadeIn>
@@ -12,7 +12,7 @@ export default function ShowcaseProject({ name, techPoints, vidSrc, imgSrc, link
             </FadeIn>
             <div className="flex flex-row flex-wrap gap-2 mt-4">
                 {techPoints.map((point, index) => (
-                    <FadeIn delay={0.1 * index}>
+                    <FadeIn key={index} delay={0.1 * index}>
                         <p className="bg-zinc-800/10 backdrop-blur px-3 py-1 border border-purple-500/30 rounded-full text-purple-300">{point}</p>
                     </FadeIn>
                 ))}
