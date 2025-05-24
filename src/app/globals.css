@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.absolute-center {
-    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
-}
+/* --------------------------------- CLASSES -------------------------------- */
 
 .text-shine-purple {
     @apply bg-clip-text text-transparent;
@@ -13,7 +11,87 @@
     background-size: 400%;
 }
 
-/* --------------------------------------------------------------------------------------- */
+.hero-box-shadow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0px -100px 200px black, inset 0px -50px 50px black;
+    pointer-events: none;
+}
+
+.hero-pulse {
+    animation: hero-pulse 5s ease-in-out infinite;
+}
+
+.conic-gradient {
+    background: conic-gradient(black 0deg, oklch(0.714 0.203 305.504) 180deg, black 180deg, oklch(0.714 0.203 305.504) 360deg);
+    scale: 2.3;
+    animation: rotate 5s infinite linear;
+}
+
+
+.project-scroll {
+    animation: project-scroll 15000ms infinite alternate ease-in-out;
+}
+
+/* -------------------------------- KEYFRAMES ------------------------------- */
+
+@keyframes shine {
+    0% {
+        background-position: 250%;
+    }
+
+    20% {
+        background-position: 100%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    70% {
+        background-position: 0%;
+    }
+}
+
+@keyframes hero-pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes project-scroll {
+    from {
+        object-position: top;
+    }
+
+    to {
+        object-position: bottom;
+    }
+}
+
+/* ------------------------------- SCROLL BAR ------------------------------- */
 
 /*********** Baseline, reset styles ***********/
 input[type="range"] {
@@ -66,87 +144,4 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 0.5rem;
     height: 1rem;
     width: 1rem;
-}
-
-/* --------------------------------------------------------------------------------------- */
-
-.hero-box-shadow::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 0px -100px 200px black, inset 0px -50px 50px black;
-    pointer-events: none;
-}
-
-.hero-pulse {
-    animation: hero-pulse 5s ease-in-out infinite;
-}
-
-/* ANIMATION */
-
-@keyframes shine {
-    0% {
-        background-position: 250%;
-    }
-
-    20% {
-        background-position: 100%;
-    }
-
-    50% {
-        background-position: 100%;
-    }
-
-    70% {
-        background-position: 0%;
-    }
-}
-
-@keyframes hero-pulse {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-/* ------------------------------- TOP PROJECT ------------------------------ */
-
-.conic-gradient {
-    background: conic-gradient(black 0deg, oklch(0.714 0.203 305.504) 180deg, black 180deg, oklch(0.714 0.203 305.504) 360deg);
-    scale: 2.3;
-    animation: rotate 5s infinite linear;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.fade-in {
-    animation: fade-in forwards ease-in-out;
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-        /* transform: translateY(50px); */
-    }
-    to {
-        opacity: 1;
-        /* transform: translateY(0px); */
-    }
 }
