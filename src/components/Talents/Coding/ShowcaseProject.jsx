@@ -11,20 +11,20 @@ export default function Project({ name, techPoints, vidSrc, imgSrc, link, infoLi
             <FadeIn>
                 <h3 className="hidden lg:block mt-8 font-bold text-shine-purple text-4xl text-left">MOST RECENT - {name}</h3>
             </FadeIn>
-            <div className="relative mt-2 rounded-lg w-full aspect-video">
+            <div className="relative mt-2 rounded-xl w-full aspect-video">
                 {/* CONIC GRADIENT */}
-                <div className="top-0 left-0 absolute blur-3xl rounded-lg w-full h-full overflow-hidden">
+                <div className="top-0 left-0 absolute blur-3xl rounded-xl w-full h-full overflow-hidden">
                     <div className="top-0 left-0 absolute w-full h-full conic-gradient"></div>
                 </div>
-                <div className="top-0 left-0 absolute blur-sm rounded-lg w-full h-full overflow-hidden">
+                <div className="top-0 left-0 absolute blur-sm rounded-xl w-full h-full overflow-hidden">
                     <div className="top-0 left-0 absolute w-full h-full conic-gradient" style={{ animationDelay: "40ms" }}></div>
                 </div>
-                <div className="top-0 left-0 absolute rounded-lg w-full h-full overflow-hidden">
+                <div className="top-0 left-0 absolute rounded-xl w-full h-full overflow-hidden">
                     <div className="top-0 left-0 absolute w-full h-full conic-gradient" style={{ animationDelay: "50ms" }}></div>
                 </div>
 
                 {/* IMAGE */}
-                <div className="top-px left-px absolute rounded-lg w-[calc(100%-2px)] h-[calc(100%-2px)] overflow-hidden">
+                <div className="top-px left-px absolute rounded-xl w-[calc(100%-2px)] h-[calc(100%-2px)] overflow-hidden">
                     <motion.img
                         src={imgSrc}
                         alt="class compass project"
@@ -40,7 +40,7 @@ export default function Project({ name, techPoints, vidSrc, imgSrc, link, infoLi
                 <div className="bottom-4 left-4 absolute flex flex-row flex-wrap gap-2 mt-4">
                     {techPoints.map((point, index) => (
                         <FadeIn key={index} delay={0.1 * index}>
-                            <p className="bg-zinc-800/10 backdrop-blur px-3 py-1 border border-purple-500/30 rounded-full text-purple-300">{point}</p>
+                            <p className="bg-black/50 backdrop-blur px-3 py-1 border border-purple-500/30 rounded-full text-purple-300">{point}</p>
                         </FadeIn>
                     ))}
                 </div>
