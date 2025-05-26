@@ -28,10 +28,10 @@ export default function Project({ name, techPoints, vidSrc, imgSrc, link, infoLi
                     <motion.img
                         src={imgSrc}
                         alt="class compass project"
-                        className="absolute w-full"
+                        className="absolute w-full h-full object-cover project-scroll"
                         initial={{ top: 0 }}
                         animate={{ top: 0 }}
-                        whileHover={{ top: -1940, transition: { duration: 15, ease: "easeOut" } }}
+                    // whileHover={{ top: -1940, transition: { duration: 15, ease: "easeOut" } }}
                     >
                     </motion.img>
                 </div>
@@ -40,7 +40,8 @@ export default function Project({ name, techPoints, vidSrc, imgSrc, link, infoLi
                 <div className="bottom-4 left-4 absolute flex flex-row flex-wrap gap-2 mt-4">
                     {techPoints.map((point, index) => (
                         <FadeIn key={index} delay={0.1 * index}>
-                            <p className="bg-black/50 backdrop-blur px-3 py-1 border border-purple-500/30 rounded-full text-purple-300">{point}</p>
+                            {/* <p className="bg-black/50 backdrop-blur px-3 py-0.5 border border-purple-500/30 rounded-full text-purple-300">{point}</p> */}
+                            <p className={`${point.color} px-3 py-0.5 rounded-full border backdrop-blur-sm`}>{point.text}</p>
                         </FadeIn>
                     ))}
                 </div>

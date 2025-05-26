@@ -27,14 +27,14 @@
 }
 
 .conic-gradient {
-    background: conic-gradient(black 0deg, oklch(0.714 0.203 305.504) 180deg, black 180deg, oklch(0.714 0.203 305.504) 360deg);
+    background: conic-gradient(black 0deg, oklch(0.714 0.203 305.504) 170deg, white 180deg, black 180deg, oklch(0.714 0.203 305.504) 350deg, white 360deg);
     scale: 2.3;
-    animation: rotate 5s infinite linear;
+    animation: rotate 7s infinite linear;
 }
 
 
 .project-scroll {
-    animation: project-scroll 15000ms infinite alternate ease-in-out;
+    animation: project-scroll 20s infinite alternate ease-in-out;
 }
 
 /* -------------------------------- KEYFRAMES ------------------------------- */
@@ -144,4 +144,34 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 0.5rem;
     height: 1rem;
     width: 1rem;
+}
+
+/* ------------------------------- scroll bar ------------------------------- */
+
+
+* {
+    --sb-track-color: #232E33;
+    --sb-thumb-color: #c5c5c5;
+    --sb-size: 6px;
+}
+
+*::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    * {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
 }
