@@ -42,10 +42,22 @@ export default function Coding() {
             <Project
                 name={"LIVE F1"}
                 techPoints={[
-                    "Real Time F1 Telemetry and Data",
-                    "Custom WebSocket Server",
-                    "NextJS Frontend",
-                    "Tailwind Styling"
+                    {
+                        text: "NextJS Frontend",
+                        color: "bg-black/50 border-zinc-500/75"
+                    },
+                    {
+                        text: "Tailwind Styling",
+                        color: "bg-blue-500/50 border-blue-500/75"
+                    },
+                    {
+                        text: "Real Time F1 Telemetry and Data",
+                        color: "bg-emerald-500/50 border-emerald-500/75"
+                    },
+                    {
+                        text: "Custom WebSocket Server",
+                        color: "bg-purple-500/50 border-purple-500/75"
+                    },
                 ]}
                 imgSrc={"/img/Projects/live-f1.png"}
                 link={"https://live-f1.com"}
