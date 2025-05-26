@@ -100,17 +100,17 @@ export default function Home() {
                 <Particles options={options} />
                 <div className="">
                     {/* BACK BUTTON */}
-                    <button onClick={() => router.push("/")} className="group top-4 left-4 z-20 fixed bg-zinc-900/50 backdrop-blur-sm px-3 py-1 hover:pl-8 border border-yellow-400/50 rounded-full text-yellow-300 duration-200 ease-out">
+                    <button onClick={() => router.push("/")} className="group top-4 left-4 z-20 fixed bg-zinc-900/50 backdrop-blur-sm px-3 py-1 hover:pl-8 border border-blue-500/40 rounded-full text-blue-300 duration-200 ease-out">
                         Back Home
                         <Image src="/svg/open.svg" width={20} height={20} alt="open link" className="top-1/2 left-2 absolute opacity-0 group-hover:opacity-100 invert rounded-full h-full aspect-square -rotate-[135deg] -translate-y-1/2 duration-200 ease-out" />
                     </button>
 
                     {/* HERO */}
                     <div className="relative flex md:flex-row flex-col justify-center items-center gap-4 py-52">
-                        <Image src="/img/Projects/live-f1.png" width={1920} height={1080} alt="live f1 image" className="top-0 left-0 absolute opacity-30 w-full h-full object-cover object-top" />
-                        <Image src="/svg/live-f1-logo.svg" width={100} height={100} alt="Live F1 Logo" className="z-10 border-2 border-white/20 rounded-full" style={{ filter: "drop-shadow(0 5px 5px black)" }} />
-                        <a className="group z-10 font-extrabold tracking-wider cursor-pointer" href="https://live-f1.com" target="_blank" style={{ filter: "drop-shadow(0 5px 5px black)" }}>
-                            <h1 className="text-4xl sm:text-6xl md:text-8xl text-center">live-f1.com</h1>
+                        <Image src="/img/Projects/dashboard.png" width={1920} height={1080} alt="class compass image" className="top-0 left-0 absolute opacity-30 w-full h-full object-cover object-top" />
+                        <Image src="/svg/classcompass-logo.svg" width={100} height={100} alt="Class Compass Logo" className="z-10 bg-black p-3 border-2 border-white/20 rounded-full" style={{ filter: "drop-shadow(0 5px 5px black)" }} />
+                        <a className="group z-10 font-extrabold tracking-wider cursor-pointer" href="https://www.classcompass.site" target="_blank" style={{ filter: "drop-shadow(0 5px 5px black)" }}>
+                            <h1 className="text-4xl sm:text-6xl md:text-8xl text-center">classcompass.site</h1>
                             <span className="bottom-0 left-0 absolute bg-white w-0 group-hover:w-full h-2 duration-300 ease-out"></span>
                         </a>
                     </div>
@@ -123,10 +123,7 @@ export default function Home() {
                                 </FadeIn>
                                 <div className="flex flex-row flex-wrap gap-2">
                                     <FadeIn delay={0.1}>
-                                        <Link link="https://github.com/BENNNZO/f1-dashboard" text="Github (Source Code)" />
-                                    </FadeIn>
-                                    <FadeIn delay={0.2}>
-                                        <Link link="https://live-f1.com" text="https://live-f1.com" />
+                                        <Link link="https://classcompass.site" text="https://classcompass.site" />
                                     </FadeIn>
                                 </div>
                             </div>
@@ -137,7 +134,7 @@ export default function Home() {
                                     <h2 className="font-bold text-2xl">Technologies Used</h2>
                                 </FadeIn>
                                 <div className="flex flex-row flex-wrap gap-2">
-                                    {["HTML", "CSS", "JS", "React", "NodeJS", "NextJS", "Tailwind", "Zustand", "Web Sockets"].map((text, index) => (
+                                    {["HTML", "CSS", "JS", "React", "NodeJS", "NextJS", "Tailwind", "Zustand", "OpenAI API", "AuthJS", "Stripe Payments"].map((text, index) => (
                                         <FadeIn key={index} delay={(0.1 * index) + 0.1}>
                                             <Tech text={text} />
                                         </FadeIn>
@@ -151,7 +148,7 @@ export default function Home() {
                                     <h2 className="font-bold text-2xl">Features</h2>
                                 </FadeIn>
                                 <div className="flex flex-row flex-wrap gap-2">
-                                    {["Custom Websocket Server", "Live F1 Telemetry and Data", "Skeleton Loading System", "Responsive Design", "Custom Development Tool: Race Simulator"].map((text, index) => (
+                                    {["Responsive Design", "AI Weekly Panner", "Automatic Class Data Syncronization", "Fully Customizable Dashboard", "Multiple Live Music Options"].map((text, index) => (
                                         <FadeIn key={index} delay={(0.1 * index) + 0.1}>
                                             <Tech text={text} />
                                         </FadeIn>
@@ -161,10 +158,10 @@ export default function Home() {
                         </Container>
                         <Container>
                             <FadeIn>
-                                <h2 className="font-bold text-2xl">What Is live-f1.com?</h2>
+                                <h2 className="font-bold text-2xl">What Is Class Compass?</h2>
                             </FadeIn>
                             <FadeIn delay={0.1}>
-                                <p>This is a real-time formula 1 telemetry and data dashboard. Within the dashboard you will find <Strong text="track positions" />, <Strong text="lap times" />, <Strong text="sector times" />, <Strong text="intervals" />, <Strong text="weather" />, <Strong text="race control messages" />, and even <Strong text="live team radios" />. There is also a real-time circuit with drivers that move on the track in real-time!</p>
+                                <p>ClassCompass is an interactive student progress dashboard that empowers learners to visualize and manage their academic journey in real time. Within the dashboard, students can <Strong text="track upcoming assignments, view grade trends, set personalized study reminders, and monitor goal completion—all on a single, intuitive interface" />. It{`'`}s a productivity tool <Strong text="designed by a student for students" />, bringing clarity and motivation to every semester.</p>
                             </FadeIn>
                         </Container>
                         <Container>
@@ -172,7 +169,7 @@ export default function Home() {
                                 <h2 className="font-bold text-2xl">How Was It Built?</h2>
                             </FadeIn>
                             <FadeIn delay={0.1}>
-                                <p>I built this project from scratch starting with just `npx create-next-app@latest`. The main technologies I used are: <Strong text="NodeJS" />, <Strong text="NextJS" />, <Strong text="Tailwind" />, <Strong text="Zustand" />, and <Strong text="Websockets" />. I had to build a custom websocket server so that I could push the f1 data to the client as the f1 websocket does not allow client side connections.</p>
+                                <p>I developed ClassCompass from the ground up using <Strong text="Next.js" /> and <Strong text="Tailwind CSS" /> to ensure a fast, responsive experience across devices. State management is handled with <Strong text="Zustand" />, while secure authentication and account linking leverage <Strong text="Auth.js" />. I integrated the <Strong text="Canvas LMS API" /> to pull live course data, and implemented <Strong text="Stripe" /> for seamless subscription billing. Finally, an <Strong text="AI-driven scheduling engine auto-generates customizable planners" />, helping users stay organized without the hassle of manual entry.</p>
                             </FadeIn>
                         </Container>
                     </section>
@@ -183,15 +180,15 @@ export default function Home() {
 }
 
 function Strong({ text }) {
-    return <span className="font-bold text-amber-400">{text}</span>
+    return <span className="font-bold text-blue-400">{text}</span>
 }
 
 function Tech({ text }) {
-    return <p className="z-10 bg-zinc-800/00 backdrop-blur px-3 py-1 border border-yellow-400/30 rounded-[17px] text-yellow-300">{text}</p>
+    return <p className="z-10 bg-zinc-800/00 backdrop-blur px-3 py-1 border border-blue-500/40 rounded-[17px] text-blue-300">{text}</p>
 }
 
 function Link({ text, link }) {
-    return <a href={link} target="_blank" className="z-10 bg-zinc-800/00 backdrop-blur px-3 py-1 border border-yellow-400/30 rounded-full text-yellow-300 hover:underline cursor-pointer">{text}</a>
+    return <a href={link} target="_blank" className="z-10 bg-zinc-800/00 backdrop-blur px-3 py-1 border border-blue-500/40 rounded-full text-blue-300 hover:underline cursor-pointer">{text}</a>
 }
 
 function Container({ children }) {

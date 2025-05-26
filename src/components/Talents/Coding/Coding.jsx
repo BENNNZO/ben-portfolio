@@ -37,7 +37,7 @@ export default function Coding() {
                 ]}
                 imgSrc={"/img/Projects/classcompass.png"}
                 link={"https://www.classcompass.site"}
-                infoLink={"/class-compass"}
+                infoLink={"/class-compass-information"}
             />
             <Project
                 name={"LIVE F1"}
