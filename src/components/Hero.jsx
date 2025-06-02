@@ -11,7 +11,7 @@ export default function Hero() {
             <div className="bottom-0 left-1/2 absolute bg-gradient-to-b from-transparent to-black blur-xl w-full h-52 -translate-x-1/2"></div>
 
             {/* CONTENT */}
-            <div className="left-12 relative flex flex-col justify-center items-center lg:items-start gap-2">
+            <div className="lg:left-12 relative flex flex-col justify-center items-center lg:items-start gap-2">
                 <FadeIn>
                     <p className="font-bold text-4xl md:text-6xl">HEY, I'M <span className="text-shine-purple">BEN</span>!</p>
                 </FadeIn>
